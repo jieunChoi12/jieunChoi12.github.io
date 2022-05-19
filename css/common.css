@@ -64,3 +64,28 @@ h3{
 .content_top_pd{
     padding-top:calc(var(--lh)*3);
 }
+
+
+/* .elastine{
+    width: 307px;
+    position: relative;
+}
+.elastine img{
+    position: absolute;
+    left:50%; top:50%;
+    transform: translate(-50%,-50%);
+    transition:0.6s;
+}
+.elastine img:first-child{
+    width: 100%;
+}
+.elastine img:last-child{
+    width: 80%;
+    opacity: 0;
+}
+.elastine:hover img:first-child{
+    opacity: 0;
+}
+.elastine:hover img:last-child{
+    opacity: 1;
+} */
