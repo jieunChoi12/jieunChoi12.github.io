@@ -22,70 +22,175 @@ body{
     line-height: var(--lh);
 }
 h2{
-    font-size: 40px;
+    font-size: calc(var(--body-fz)*2.35);
     font-weight: 700;
+    text-align: center;
 }
 h3{
-    font-size: 30px;
+    font-size: calc(var(--body-fz)*1.76);
     font-weight: 700;
 }
 .main_tt{
     font-family: var(--en-ff);
     font-weight: 600;
     text-transform: uppercase;
+    text-align: center;
 }
 .slide_tt{
-    font-size: 50px;
+    font-size: calc(var(--body-fz)*2.94);
 }
 
 .btn{
     display:inline-block;
+    width: 160px;
     height: 40px;
     border-radius:20px;
-    border:1px solid #000;
-    padding:0 20px;
-    /* color:var(--white); */
-    text-align: center;
+    border:1px solid var(--white);
+    padding:0 23px;
+    box-sizing: border-box;
+    color:var(--white);
     line-height: 40px;
     font-family: var(--en-ff);
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: var(--body-fz);
+    overflow: hidden;
+    transition:all 0.4s;
 }
 .btn span{
     vertical-align:middle;
-    padding-left:30px;
-    display:none;
+    padding-left:20px;
+    display:inline-block;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.btn:hover{
+    width: 210px;
+}
+.btn:hover span{
+    opacity: 1;
+}
+.tab{
+    padding: calc(var(--lh)*2) 0;
+    display: flex;
+    justify-content: center;
+    gap:50px;
+}
+.tab li{
+    font-size: calc(var(--body-fz)*1.47);
+    font-family: var(--en-ff);
+    text-transform: uppercase;
+    padding-bottom:13px;
+    border-bottom:1px solid var(--red);
 }
 
 /* --------LAYOUT-------- */
 .container{
     width:var(--width);
+    margin:0 auto;
+
+}
+.content_pd{
+    padding:calc(var(--lh)*3) 0;
 }
 .content_top_pd{
     padding-top:calc(var(--lh)*3);
 }
 
 
-/* .elastine{
-    width: 307px;
+/* --------HEADER-------- */
+header{
+    background:linear-gradient(rgba(0,0,0,.3) 105px,rgba(255,255,255,.8) 105px);
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    z-index:99;
+    height: 105px;
+    overflow:hidden;
+}
+header > .container{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+header > div .main_menu{
+    display:flex;
+}
+header .main_menu > li{
+    padding:0 50px;
+    font-size: calc(var(--body-fz)*1.17);
     position: relative;
 }
-.elastine img{
+header .main_menu > li > a{
+    padding:40px 0;
+    color:#fff;
+    text-transform: uppercase;
+    font-family: var(--en-ff);
+    line-height: 105px;
+}
+header .main_menu > li > ul{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:15px;
     position: absolute;
-    left:50%; top:50%;
-    transform: translate(-50%,-50%);
-    transition:0.6s;
+    top:100%;left:50%;
+    transform: translateX(-50%);
+    padding:20px 0;
 }
-.elastine img:first-child{
-    width: 100%;
+header .main_menu > li > ul >li{
+    white-space:nowrap;
+    text-align: center;
+    font-size: var(--body-fz);
 }
-.elastine img:last-child{
-    width: 80%;
-    opacity: 0;
+header .etc_menu{
+    display:flex;
+    gap:20px;
 }
-.elastine:hover img:first-child{
-    opacity: 0;
+header .etc_menu > li{
+    font-size: calc(var(--body-fz)*1.17);
+    color:#fff;
 }
-.elastine:hover img:last-child{
+header .etc_menu li > a{
+    color:#fff;
+    line-height: 105px;
+}
+header .etc_menu .eng{
+    font-family: var(--en-ff);
+    text-transform: uppercase;
+    position: relative;
+}
+header .etc_menu .eng:hover ul{
     opacity: 1;
-} */
+    z-index:10;
+}
+header .etc_menu .eng > ul{
+    width: 108px;
+    height: 110px;
+    padding:20px 0;
+    background:rgba(255,255,255,.8);
+    box-sizing: border-box;
+    position: absolute;
+    top:100%; left:50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+header .etc_menu .eng > ul li{
+    font-size: var(--body-fz);
+    color:#2a2a2a;
+    margin-bottom:12px;
+    text-align: center;
+}
+header .logo > a{
+    display:block;
+    width: 218px;
+    height: 44px;
+    background:url(../Images/Logo_white.png) no-repeat 0 0/100% 100%;
+    text-indent: -999em;
+}
+header .target{
+    position: absolute;
+    border-bottom:3px solid #000;
+    transition:all 0.4s;
+}
+
+
+

@@ -12,7 +12,14 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>LG 생활건강 - 2차포트폴리오</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script src="js/main.js"></script>
 </head>
 <body>
     <header>
@@ -59,29 +66,31 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="etc_menu">
-                    <li>eng
-                        <ul>
-                            <li>kor</li>
-                            <li>eng</li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="material-symbols-outlined">search</a></li>
-                    <li><a href="customer.html">고객센터</a></li>
-                </ul>
             </nav>
+            <span class="target"></span>
+            <ul class="etc_menu">
+                <li class="eng">
+                    <a href="#">eng</a>
+                    <ul>
+                        <li>kor</li>
+                        <li>eng</li>
+                    </ul>
+                </li>
+                <li><a href="" class="material-symbols-outlined">search</a></li>
+                <li><a href="customer.html">고객센터</a></li>
+            </ul>
         </div>
     </header>
     <div class="main_slide">
-        <ul>
+        <ul class="slider">
             <li class="slide1">
-                <h2>LG생활건강은 고객여러분의 생활 속에서 함께하며 건강하고 아름다운 삶의 실현을 추구합니다.</h2>
+                <h2>LG생활건강은 여러분의 생활 속에서 <br> 함께하며 건강하고 아름다운 <br>삶의 실현을 추구합니다.</h2>
             </li>
             <li class="slide2">
-                <h2>우리는 건강한 지구를 후손에게 물려주기 위한 ESG활동으로 진정한 계승자로서의 책임을 다할 것입니다.</h2>
+                <h2>우리는 건강한 지구를 <br>후손에게 물려주기 위한 ESG활동으로<br> 진정한 계승자로서의 책임을 다할 것입니다.</h2>
             </li>
             <li class="slide3">
-                <h2>깨끗하고 투명한 경영으로 여러분과 만날 것을 약속합니다.</h2>
+                <h2>깨끗하고 투명한 경영으로 <br>여러분과 만날 것을 약속합니다.</h2>
             </li>
             <li class="slide4">
                 <h2>고객님 곁에 항상 함께 하겠습니다.</h2>
@@ -91,29 +100,21 @@
             <a href="" class="prev material-symbols-outlined">arrow_back_ios</a>
             <a href="" class="next material-symbols-outlined">arrow_forward_ios</a>
         </p>
+        <span class="pager_2"></span>
+        <span class="pager_num"></span>
         <div class="indicator">
-            <p class="page_num">01</p>
-            <p class="pager">
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">4</a>
-                <a href="">5</a>
-            </p>
-            <p class="btns">
-                <span class="play material-symbols-outlined">play_arrow</span>
-                <span class="stop material-symbols-outlined">stop</span>
-            </p>
+            <span class="play material-symbols-outlined">play_arrow</span>
+            <span class="stop material-symbols-outlined">stop</span>
         </div>
     </div>
 
     <main>
-        <div class="best_brand content_top_pd container">
+        <div class="best_brand content_pd container">
             <h2 class="main_tt">best brand</h2>
             <ul class="tab">
-                <li><a href="">beautiful</a></li>
-                <li><a href="">healthy</a></li>
-                <li><a href="">refreshing</a></li>
+                <li><a href="#content1">beautiful</a></li>
+                <li><a href="#content2">healthy</a></li>
+                <li><a href="#content3">refreshing</a></li>
             </ul>
             <div class="tab_content">
                 <div id="content1">
@@ -160,16 +161,12 @@
                         
                     </ul>
                 </div>
-                <div class="control">
-                    <p class="left material-symbols-outlined">chevron_left</p>
-                    <p class="right material-symbols-outlined">chevron_right</p>
-                </div>
             </div>
         </div>
 
         <div class="brand_desc content_top_pd">
             <div class="container">
-                <div id="ctt_1">
+                <div id="ctt_1" class="contents">
                     <div class="content">
                         <h3>beautiful</h3>
                         <p>Beautiful 사업은 건강한 아름다움의 꿈을 실현해 나가기 위해 우수한 품질을 갖춘 세계 최고의 브랜드를 육성하는 것을 목표로 하고 있으며, 이를 통해 국내시장 선도를 넘어 해외시장으로 강하게, 멀리 확장해 나가고 있습니다.</p>
@@ -182,7 +179,7 @@
                         <img src="Images/best_brand/beautiful/cnp_2.png" alt="">
                     </div>
                 </div>
-                <div id="ctt_2">
+                <div id="ctt_2" class="contents">
                     <div class="content">
                         <h3>healthy</h3>
                         <p>Healthy 사업은 항상 고객과 함께하는 생활용품 사업으로 일반 가정에서 다양하게 쓰이고 있는 구강용품 / 피부용품 / 모발용품 / 세탁용품 / 주거용품 / 지류용품 등을 통해 보다 편리하고 건강한 생활창조에 이바지하고 있습니다.</p>
@@ -195,7 +192,7 @@
                         <img src="Images/best_brand/healthy/organist_2.png" alt="">
                     </div>
                 </div>
-                <div id="ctt_3">
+                <div id="ctt_3" class="contents">
                     <div class="content">
                         <h3>refreshing</h3>
                         <p>Refreshing 사업은 특유의 상쾌한 맛으로 전세계 소비자의 사랑을 받아온 코카콜라 제품 등을 국내에서 생산/판매하고 있는 코카-콜라 음료㈜와 썬키스트 훼미리 주스, 써니텐 등을 생산하는 음료 전문 회사인 해태htb㈜ 등에서 다양한 제품을 선보이고 있습니다. 아울러, 빠르게 성장하고 있는 기능성음료와 기능성유제품 시장에 진입하여 소비자에게 더욱 가까이 다가가겠습니다.</p>
@@ -248,38 +245,47 @@
             </ul>
         </div>
 
-        <div class="news content_top_pd container">
+        <div class="news content_pd container">
             <h2 class="main_tt">news</h2>
             <p>생활건강의 최신 소식을 확인해 보세요.</p>
             <ul>
                 <li class="news_1">
                     <div class="image_wrap">
-                        <img src="Images/news/image_3.jpg" alt="">
+                        <!-- <img src="Images/news/image_3.jpg" alt=""> -->
+                        <a href="#" class="btn">read more
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
                     </div>
-                    <p>LG생활건강, 금빛 봉황이 선사하는 아름다운 시간 ‘후 환유고 스페셜 에디션’ 출시</p>
+                    <p>LG생활건강, 프리미엄 생활용품 '포켓몬 에디션' 제품 출시</p>
                 </li>
                 <li class="news_2">
                     <div class="image_wrap">
-                        <img src="Images/news/image_2.jpg" alt="">
+                        <!-- <img src="Images/news/image_2.jpg" alt=""> -->
+                        <a href="#" class="btn">read more
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
                     </div>
-                    <p>LG생활건강, 빌리프 핸드&바디 라인 ‘오프(OFF) 컬렉션’ 출시</p>
+                    <p>LG생활건강, 벨먼 내추럴 스파 수분광채 사해소금 스크럽 바디클렌저 5종 출시</p>
                 </li>
                 <li class="news_3">
                     <div class="image_wrap">
-                        <img src="Images/news/image_1.jpg" alt="">
+                        <!-- <img src="Images/news/image_1.jpg" alt=""> -->
+                        <a href="#" class="btn">read more
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
                     </div>
-                    <p>마미포코, -3℃로 시원한 2022년 업그레이드 땀먹는 썸머팬티 출시</p>
+                    <p>LG생활건강, 궁중 자수의 정성을 담은 '후 환유 헤리티지 세트' 출시</p>
                 </li>
             </ul>
         </div>
 
-        <div class="ad content_top_pd">
+        <div class="ad">
             <div class="container">
                 <div class="content">
                     <h2 class="main_tt">advertisement</h2>
-                    <p>LG생활건강 CF 다시 보고 싶다면 ? 
+                    <a href="">LG생활건강 CF 다시 보고 싶다면 ? 
                         <span class="material-symbols-outlined">arrow_right_alt</span>
-                    </p>
+                    </a>
                 </div>
                 <div class="video">
                     <img src="Images/video/video_1.jpg" alt="video">
