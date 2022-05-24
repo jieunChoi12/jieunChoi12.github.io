@@ -9,12 +9,18 @@
     <meta name="robots" content="all">
     <meta name="author" content="jieun Choi">
     <meta name="reply-to" content="cje912@naver.com">
+    <title>회사개요 - LG 생활건강</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/common.css">
-    <title>회사개요 - LG 생활건강</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/story.js"></script>
 </head>
-<body class="company">
+<body class="story">
     <header>
         <div class="container">
             <h1 class="logo"><a href="index.html">logo</a></h1>
@@ -22,9 +28,9 @@
                 <ul class="main_menu">
                     <li><a href="">brand</a>
                         <ul>
-                            <li><a href="">beautiful</a></li>
-                            <li><a href="">healthy</a></li>
-                            <li><a href="">refreshing</a></li>
+                            <li><a href="">Beautiful</a></li>
+                            <li><a href="">Healthy</a></li>
+                            <li><a href="">Refreshing</a></li>
                         </ul>
                     </li>
                     <li><a href="#">esg</a>
@@ -38,15 +44,15 @@
                     </li>
                     <li><a href="#">news</a>
                         <ul>
-                            <li><a href="#">생활건강 news</a></li>
-                            <li><a href="#">생활건강 story</a></li>
+                            <li><a href="#">생활건강 News</a></li>
+                            <li><a href="#">생활건강 Story</a></li>
                             <li><a href="#">생활문화정보</a></li>
-                            <li><a href="#">advertisement</a></li>
+                            <li><a href="#">Advertisement</a></li>
                         </ul>
                     </li>
                     <li><a href="#">company</a>
                         <ul>
-                            <li><a href="#">ceo 메시지</a></li>
+                            <li><a href="#">CEO 메시지</a></li>
                             <li><a href="story.html">회사개요</a></li>
                             <li><a href="history.html">연혁</a></li>
                             <li><a href="#">채용정보</a></li>
@@ -59,19 +65,26 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="etc_menu">
-                    <li>eng
-                        <ul>
-                            <li>kor</li>
-                            <li>eng</li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="material-symbols-outlined">search</a></li>
-                    <li><a href="customer.html">고객센터</a></li>
-                </ul>
             </nav>
+            <span class="target"></span>
+            <ul class="etc_menu">
+                <li class="eng">
+                    <a href="#">eng</a>
+                    <ul>
+                        <li>kor</li>
+                        <li>eng</li>
+                    </ul>
+                </li>
+                <li><a href="#search" class="material-symbols-outlined search">search</a></li>
+                <li><a href="customer.html">고객센터</a></li>
+            </ul>
         </div>
     </header>
+    <div id="search">
+        <label for="search1">Press ENTER to Search</label>
+        <input type="text" id="search1" name="search" placeholder="검색어를 입력해주세요.">
+        <a href="#" class="close"><span class="material-symbols-outlined">close</span></a>
+    </div>
 
     <div class="banner">
         <h2 class="slide_tt">회사개요</h2>
@@ -79,16 +92,16 @@
     </div>
 
     <main>
-        <div class="story_1 content_top_pd">
+        <div class="story_1 content_pd">
             <h2>고객 여러분과 항상 함께 해온 LG생활건강</h2>
             <p>
                 <strong>1등 LG생활건강</strong> <br> 진정한 미래의 1등기업.<br> 이것은 꿈만으로 이루어지는 것이 아닙니다.
             </p>
             <p>
-                LG생활건강은 1947년 창립 이래 고객 여러분의 생활속에서 함께하며 건강하고 아름다운 삶의 실현을 추구해 왔습니다.
+                LG생활건강은 1947년 창립 이래 고객 여러분의 생활속에서 함께하며<br> 건강하고 아름다운 삶의 실현을 추구해 왔습니다.
             </p>
             <p>
-                국내 최초의 화장품과 치약을 시작으로 여러분들이 매일 만날 수 있는 다양한 제품을 통해 고객 여러분의 사랑을 받으며 국내 최고의 생활문화 기업으로 성장하였습니다.
+                국내 최초의 화장품과 치약을 시작으로 여러분들이 매일 만날 수 있는 다양한 제품을 통해 <br>고객 여러분의 사랑을 받으며 국내 최고의 생활문화 기업으로 성장하였습니다.
             </p>
         </div>
 
@@ -96,9 +109,24 @@
             <div class="container">
                 <h2>창의적인 소비자 마케팅 회사</h2>
                 <ul>
-                    <li>건강한(Healthy)</li>
-                    <li>아름다운(Beautiful)</li>
-                    <li>활기찬(Refreshing)</li>
+                    <li>
+                        <span>건강한<br>(Healthy)</span>
+                        <svg>
+                            <circle cx="178" cy="178" r="178"></circle>
+                        </svg>
+                    </li>
+                    <li>
+                        <span>아름다운<br>(Beautiful)</span>
+                        <svg>
+                            <circle cx="178" cy="178" r="178"></circle>
+                        </svg>
+                    </li>
+                    <li>
+                        <span>활기찬<br>(Refreshing)</span>
+                        <svg>
+                            <circle cx="178" cy="178" r="178"></circle>
+                        </svg>
+                    </li>
                 </ul>
                 <p>
                     앞으로 생활용품, 화장품, 음료사업의 경계를 넘어 소비자들을 더 건강하고(Healthy), 아름답고(Beautiful), 활기차게(Refreshing) 해드리기 위해 다양한 노력을 하고 있으며, 앞으로도 고객이 필요로 하는 사업을 새롭게 펼쳐나갈 것입니다. 그래서 이전과 확실히 차별화되고 그러면서도 더욱 좋은 제품과 서비스를 통해 여러분과 특별한 관계를 맺어가고자 합니다.
@@ -111,9 +139,9 @@
                 <h2>다르게 일하고 탁월한 인재가 배출되는 곳</h2>
                 <div class="content">
                     <ul>
-                        <li>불필요한 업무 최소화</li>
+                        <li>불필요한 업무 <br>최소화</li>
                         <li>일과 삶의 균형</li>
-                        <li>고객을 위한 일의 집중</li>
+                        <li>고객을 위한 <br>일의 집중</li>
                         <li>직급체계 단순화</li>
                     </ul>
                     <p>
@@ -124,186 +152,196 @@
         </div>
     </main>
 
-    <footer class="content_top_pd container">
+    <footer class="container">
         <div class="footer_bar">
-            <p>브랜드 전체보기
-                <span class="material-symbols-outlined">expand_more</span>
-            </p>
-            <p>패밀리사이트
-                <span class="material-symbols-outlined">expand_more</span>
-            </p>
-        </div>
-        <div class="brand_all">
-            <div class="be">
-                <h4>beautiful</h4>
-                <ul>
-                    <li><a href="#">후</a></li>
-                    <li><a href="#">오휘</a></li>
-                    <li><a href="#">숨37°</a></li>
-                    <li><a href="#">빌리프</a></li>
-                    <li><a href="#">더 사가 오브 수</a></li>
-                    <li><a href="#">네이처컬렉션</a></li>
-                    <li><a href="#">더페이스샵</a></li>
-                    <li><a href="#">비욘드</a></li>
-                    <li><a href="#">CNP</a></li>
-                    <li><a href="#">CNP RX</a></li>
-                    <li><a href="#">VDL</a></li>
-                    <li><a href="#">VDIVOV</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">이자녹스</a></li>
-                    <li><a href="#">수려한</a></li>
-                    <li><a href="#">코드글로컬러</a></li>
-                    <li><a href="#">보닌</a></li>
-                    <li><a href="#">케어존</a></li>
-                    <li><a href="#">더마리프트</a></li>
-                    <li><a href="#">생활정원</a></li>
-                    <li><a href="#">FMGT</a></li>
-                    <li><a href="#">닥터벨머</a></li>
-                    <li><a href="#">예화담</a></li>
-                    <li><a href="#">벨먼</a></li>
-                    <li><a href="#">젠톨로지</a></li>
-                    <li><a href="#">피지오겔</a></li>
-                </ul>
-            </div>
-            <div class="he">
-                <h4>healthy</h4>
-                <div class="he_left">
-                    <div class="left_1">
-                        <h5>헤어케어</h5>
+            <ul>
+                <li>
+                    <a href="#brand_all">브랜드 전체보기</a>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </li>
+                <li>
+                    <a href="#brand_all">패밀리 사이트</a>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </li>
+            </ul>
+            <div id="brand_all">
+                <div>
+                    <h4>beautiful</h4>
+                    <div class="br be">
                         <ul>
-                            <li><a href="#">엘라스틴</a></li>
-                            <li><a href="#">오가니스트</a></li>
-                            <li><a href="#">리엔</a></li>
-                            <li><a href="#">닥터그루트</a></li>
-                            <li><a href="#">실크테라피</a></li>
+                            <li><a href="#">후</a></li>
+                            <li><a href="#">오휘</a></li>
+                            <li><a href="#">숨37°</a></li>
+                            <li><a href="#">빌리프</a></li>
+                            <li><a href="#">더 사가 오브 수</a></li>
+                            <li><a href="#">네이처컬렉션</a></li>
+                            <li><a href="#">더페이스샵</a></li>
+                            <li><a href="#">비욘드</a></li>
+                            <li><a href="#">CNP</a></li>
+                            <li><a href="#">CNP RX</a></li>
+                            <li><a href="#">VDL</a></li>
+                            <li><a href="#">VDIVOV</a></li>
                         </ul>
-                    </div>
-                    <div class="left_2">
-                        <h5>구강용품</h5>
                         <ul>
-                            <li><a href="#">페리오</a></li>
-                            <li><a href="#">죽염치약</a></li>
-                            <li><a href="#">REACH</a></li>
-                        </ul>
-                    </div>
-                    <div class="left_3">
-                        <h5>세탁용품</h5>
-                        <ul>
-                            <li><a href="#">샤프란</a></li>
-                            <li><a href="#">아우라</a></li>
-                            <li><a href="#">한입세제</a></li>
-                            <li><a href="#">테크</a></li>
-                            <li><a href="#">수퍼타이</a></li>
-                            <li><a href="#">FIJI</a></li>
-                            <li><a href="#">산소크린</a></li>
+                            <li><a href="#">이자녹스</a></li>
+                            <li><a href="#">수려한</a></li>
+                            <li><a href="#">코드글로컬러</a></li>
+                            <li><a href="#">보닌</a></li>
+                            <li><a href="#">케어존</a></li>
+                            <li><a href="#">더마리프트</a></li>
+                            <li><a href="#">생활정원</a></li>
+                            <li><a href="#">FMGT</a></li>
+                            <li><a href="#">닥터벨머</a></li>
+                            <li><a href="#">예화담</a></li>
+                            <li><a href="#">벨먼</a></li>
+                            <li><a href="#">젠톨로지</a></li>
+                            <li><a href="#">피지오겔</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="he_right">
-                    <div class="right_1">
-                        <h5>주거용품</h5>
-                        <ul>
-                            <li><a href="#">홈스타</a></li>
-                            <li><a href="#">SAFE</a></li>
-                            <li><a href="#">퐁퐁</a></li>
-                            <li><a href="#">자연퐁</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_2">
-                        <h5>방향/탈취제</h5>
-                        <ul>
-                            <li><a href="#">아우라</a></li>
-                            <li><a href="#">샤프란 케어</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_3">
-                        <h5>베이비&기타</h5>
-                        <ul>
-                            <li><a href="#">베비언스</a></li>
-                            <li><a href="#">토디앙</a></li>
-                            <li><a href="#">메소드</a></li>
-                            <li><a href="#">시리우스</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_4">
-                        <h5>세트</h5>
-                        <ul>
-                            <li><a href="#">선물세트</a></li>
-                            <li><a href="#">미니스</a></li>
-                        </ul>
+                <div>
+                    <h4>healthy</h4>
+                    <div class="br he">
+                        <div class="he_left">
+                            <div>
+                                <h5>헤어케어</h5>
+                                <ul>
+                                    <li><a href="#">엘라스틴</a></li>
+                                    <li><a href="#">오가니스트</a></li>
+                                    <li><a href="#">리엔</a></li>
+                                    <li><a href="#">닥터그루트</a></li>
+                                    <li><a href="#">실크테라피</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>구강용품</h5>
+                                <ul>
+                                    <li><a href="#">페리오</a></li>
+                                    <li><a href="#">죽염치약</a></li>
+                                    <li><a href="#">REACH</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>세탁용품</h5>
+                                <ul>
+                                    <li><a href="#">샤프란</a></li>
+                                    <li><a href="#">아우라</a></li>
+                                    <li><a href="#">한입세제</a></li>
+                                    <li><a href="#">테크</a></li>
+                                    <li><a href="#">수퍼타이</a></li>
+                                    <li><a href="#">FIJI</a></li>
+                                    <li><a href="#">산소크린</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="he_right">
+                            <div>
+                                <h5>주거용품</h5>
+                                <ul>
+                                    <li><a href="#">홈스타</a></li>
+                                    <li><a href="#">SAFE</a></li>
+                                    <li><a href="#">퐁퐁</a></li>
+                                    <li><a href="#">자연퐁</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>방향/탈취제</h5>
+                                <ul>
+                                    <li><a href="#">아우라</a></li>
+                                    <li><a href="#">샤프란 케어</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>베이비&기타</h5>
+                                <ul>
+                                    <li><a href="#">베비언스</a></li>
+                                    <li><a href="#">토디앙</a></li>
+                                    <li><a href="#">메소드</a></li>
+                                    <li><a href="#">시리우스</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>세트</h5>
+                                <ul>
+                                    <li><a href="#">선물세트</a></li>
+                                    <li><a href="#">미니스</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="re">
-                <h4>refreshing</h4>
-                <div class="re_left">
-                    <div class="left_1">
-                        <h5>스파클링</h5>
-                        <ul>
-                            <li><a href="#">코카-콜라</a></li>
-                            <li><a href="#">코카-콜라 제로</a></li>
-                            <li><a href="#">코카-콜라 라이트</a></li>
-                            <li><a href="#">환타</a></li>
-                            <li><a href="#">스프라이트</a></li>
-                            <li><a href="#">스프라이트 제로</a></li>
-                            <li><a href="#">스프라이트 킨사이다</a></li>
-                            <li><a href="#">슈웹스</a></li>
-                            <li><a href="#">밀크소다 암바사</a></li>
-                            <li><a href="#">닥터페퍼</a></li>
-                            <li><a href="#">캐나다 드라이</a></li>
-                            <li><a href="#">씨그램</a></li>
-                        </ul>
-                    </div>
-                    <div class="left_2">
-                        <h5>커피&티</h5>
-                        <ul>
-                            <li><a href="#">조지아</a></li>
-                            <li><a href="#">태양의 마테차</a></li>
-                            <li><a href="#">태양의 식후비법 W</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="re_right">
-                    <div class="right_1">
-                        <h5>주스</h5>
-                        <ul>
-                            <li><a href="#">미닛메이드</a></li>
-                            <li><a href="#">미닛메이드 스파클링</a></li>
-                            <li><a href="#">미닛메이드 쿠우</a></li>
-                            <li><a href="#">미닛메이드 유기농</a></li>
-                            <li><a href="#">미닛메이드 조이</a></li>
-                            <li><a href="#">미닛메이드 쿠우젤리</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_2">
-                        <h5>스포츠&에너지음료</h5>
-                        <ul>
-                            <li><a href="#">파워에이드</a></li>
-                            <li><a href="#">토레타</a></li>
-                            <li><a href="#">토레타!THE 락토</a></li>
-                            <li><a href="#">몬스터 에너지</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_3">
-                        <h5>생수</h5>
-                        <ul>
-                            <li><a href="#">휘오 다이아몬드 샘물</a></li>
-                            <li><a href="#">휘오 다이아몬드 EC</a></li>
-                            <li><a href="#">휘오 제주</a></li>
-                            <li><a href="#">휘오 순수</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_4">
-                        <h5>라이프 스타일</h5>
-                        <a href="#">글라소 비타민워터</a>
-                    </div>
-                    <div class="right_5">
-                        <h5>해태HTB</h5>
-                        <ul>
-                            <li><a href="#">썬키스트</a></li>
-                            <li><a href="#">기타 브랜드</a></li>
-                        </ul>
+                <div>
+                    <h4>refreshing</h4>
+                    <div class="br re">
+                        <div class="re_left">
+                            <div>
+                                <h5>스파클링</h5>
+                                <ul>
+                                    <li><a href="#">코카-콜라</a></li>
+                                    <li><a href="#">코카-콜라 제로</a></li>
+                                    <li><a href="#">코카-콜라 라이트</a></li>
+                                    <li><a href="#">환타</a></li>
+                                    <li><a href="#">스프라이트</a></li>
+                                    <li><a href="#">스프라이트 제로</a></li>
+                                    <li><a href="#">스프라이트 킨사이다</a></li>
+                                    <li><a href="#">슈웹스</a></li>
+                                    <li><a href="#">밀크소다 암바사</a></li>
+                                    <li><a href="#">닥터페퍼</a></li>
+                                    <li><a href="#">캐나다 드라이</a></li>
+                                    <li><a href="#">씨그램</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>커피&티</h5>
+                                <ul>
+                                    <li><a href="#">조지아</a></li>
+                                    <li><a href="#">태양의 마테차</a></li>
+                                    <li><a href="#">태양의 식후비법 W</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="re_right">
+                            <div>
+                                <h5>주스</h5>
+                                <ul>
+                                    <li><a href="#">미닛메이드</a></li>
+                                    <li><a href="#">미닛메이드 스파클링</a></li>
+                                    <li><a href="#">미닛메이드 쿠우</a></li>
+                                    <li><a href="#">미닛메이드 유기농</a></li>
+                                    <li><a href="#">미닛메이드 조이</a></li>
+                                    <li><a href="#">미닛메이드 쿠우젤리</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>스포츠&에너지음료</h5>
+                                <ul>
+                                    <li><a href="#">파워에이드</a></li>
+                                    <li><a href="#">토레타</a></li>
+                                    <li><a href="#">토레타!THE 락토</a></li>
+                                    <li><a href="#">몬스터 에너지</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>생수</h5>
+                                <ul>
+                                    <li><a href="#">휘오 다이아몬드 샘물</a></li>
+                                    <li><a href="#">휘오 다이아몬드 EC</a></li>
+                                    <li><a href="#">휘오 제주</a></li>
+                                    <li><a href="#">휘오 순수</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>라이프 스타일</h5>
+                                <a href="#">글라소 비타민워터</a>
+                            </div>
+                            <div>
+                                <h5>해태HTB</h5>
+                                <ul>
+                                    <li><a href="#">썬키스트</a></li>
+                                    <li><a href="#">기타 브랜드</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -324,7 +362,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
+   
 </body>
 </html>

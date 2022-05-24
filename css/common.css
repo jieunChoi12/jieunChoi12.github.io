@@ -141,6 +141,9 @@ header .main_menu > li > ul >li{
     text-align: center;
     font-size: var(--body-fz);
 }
+header .main_menu > li > ul >li>a:hover{
+    color:var(--red);
+}
 header .etc_menu{
     display:flex;
     gap:20px;
@@ -172,6 +175,7 @@ header .etc_menu .eng > ul{
     top:100%; left:50%;
     transform: translateX(-50%);
     opacity: 0;
+    transition:0.4s;
 }
 header .etc_menu .eng > ul li{
     font-size: var(--body-fz);
@@ -190,6 +194,137 @@ header .target{
     position: absolute;
     border-bottom:3px solid #000;
     transition:all 0.4s;
+}
+#search{
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background:rgba(0,0,0,.7);
+    z-index:999;
+    opacity: 0;
+    pointer-events:none;
+    transition:0.5s;
+}
+#search.active{
+    opacity: 1;
+    pointer-events: visible;
+}
+#search input{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    outline: none;
+    width: 650px;
+    height: 70px;
+    border-radius: 10px;
+    padding:20px 35px;
+    box-sizing: border-box;
+}
+#search input[placeholder]{
+    font-size: 20px;
+    color:#8c8c8c;
+}
+#search label{
+    position: absolute;
+    top:calc(50% + 60px);left:calc(50% + 220px);
+    transform: translate(-50%,-50%);
+    color:#fff;
+    text-decoration: underline;
+}
+#search .close{
+    position: absolute;
+    top:125px; right:200px;
+}
+#search .close span{
+    color:var(--white);
+    font-size: 38px;
+}
+
+
+
+/* --------FOOTER-------- */
+.footer_bar > ul{
+    height: 39px;
+    background:var(--gray);
+    display:flex;
+    gap: 50px;
+    padding:0 40px;
+}
+.footer_bar > ul li a{
+    font-size: calc(var(--body-fz)*1.17);
+    color:var(--white);
+    line-height: 39px;
+    font-weight: 700;
+}
+.footer_bar > ul li span{
+    color:var(--white);
+    vertical-align: middle;
+    cursor:pointer;
+    transition:0.3s;
+}
+.footer_bar > ul li.ui-tabs-active span{
+    transform: rotate(180deg);
+}
+.footer_bar #brand_all{
+    border:1px solid var(--gray);
+    padding: 25px 50px;
+    display:flex;
+    justify-content: space-between;
+}
+.footer_bar #brand_all h4{
+    font-size: calc(var(--body-fz)*1.17);
+    text-transform: uppercase;
+    padding-bottom:15px;
+}
+.footer_bar #brand_all > div .br{
+    display:flex;
+    justify-content: space-between;
+    gap:80px;
+}
+.footer_bar #brand_all > div .br > div{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+.footer_bar #brand_all > div .br h5{
+    font-weight: 700;
+}
+.footer_content{
+    padding:35px 0;
+    display:flex;
+    gap:52px;
+}
+.footer_content > *{
+    font-size: 15px;
+}
+.footer_content .bold{
+    font-weight: 700;
+    font-size: var(--body-fz);
+}
+.footer_content .content_2{
+    padding-left:250px;
+}
+.footer_content h2 a{
+    display:inline-block;
+    width: 216px;
+    height: 42px;
+    background:url(../Images/logo.png) no-repeat center/cover;
+    text-indent: -999em;
+}
+
+.top a{
+    font-size: 40px;
+    padding:10px;
+    border:2px solid rgba(196,4,82,.3);
+    color:rgba(196,4,82,.3);
+    transition:0.3s;
+    z-index:99;
+    position: fixed;
+    right: 60px;
+    bottom:70px;
+}
+.top a:hover{
+    border-color:var(--red);
+    color:var(--red);
 }
 
 
