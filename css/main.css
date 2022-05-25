@@ -750,6 +750,55 @@
     transition: 0.4s;;
 }
 
+.content_bottom{
+    width: 1076px;
+    margin:0 auto;
+}
+.content_bottom h2{
+    padding:30px 0;
+    border-bottom:1px solid var(--gray);
+}
+.faq > p{
+    border-bottom:1px solid #ccc;
+    padding: 20px 30px;
+    position: relative;
+    cursor:pointer;
+    transition:0.4s;
+}
+.faq > p.ui-state-active{
+    border-bottom:1px solid var(--red);
+    background:#f8f8f8;
+}
+.faq > p.ui-state-active >span{
+    transform: rotate(180deg) translateY(50%);
+}
+.faq > p em{
+    color:var(--red);
+    font-weight: 700;
+}
+.faq > p span{
+    vertical-align: middle;
+    position: absolute;
+    right:30px;
+    top:50%;
+    transform: translateY(-50%);
+    transition:0.4s;
+}
+.faq .desc{
+    padding:30px 50px;
+    display:flex;
+    flex-direction:column;
+    gap:var(--lh);
+    border-bottom:1px solid #ccc;
+    background:#f8f8f8;
+}
+.faq .desc p>span{
+    vertical-align: middle;
+    padding-right:10px;
+    color:var(--red);
+}
+
+
 
 
 
