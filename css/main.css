@@ -799,62 +799,73 @@
 }
 
 
-
-
-
-
-
-
-
 /* ----------------------BRNAD PAGE-------------------------- */
-/* ----------------------HISTORY PAGE-------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .elastine{
-    width: 307px;
+.brand .banner{
+    background:linear-gradient(to right,rgba(198,185,229,.8),rgba(173,206,255,.8));
+}   
+.brand .banner h2{
+    color:var(--white);
+    text-transform: uppercase;
+    font-family: var(--en-ff);
+}
+.brand main .tab{
+    padding-bottom:0;
+}
+.brand main .tab li{
+    font-size: calc(var(--body-fz)*1.17);
+}
+.brand section{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.brand section h3{
+    text-align: center;
+    font-size: calc(var(--body-fz)*1.47);
+    padding:calc(var(--lh)*2) 0;
+}
+.brand section ul{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:24px;
+}
+.brand section ul li{
+    width: 306px;
+    height: 306px;
     position: relative;
 }
-.elastine img{
+.brand section ul li img{
     position: absolute;
     left:50%; top:50%;
     transform: translate(-50%,-50%);
     transition:0.6s;
 }
-.elastine img:first-child{
+.brand section ul li img:first-child{
     width: 100%;
 }
-.elastine img:last-child{
+.brand section ul li img:last-child{
     width: 80%;
     opacity: 0;
 }
-.elastine:hover img:first-child{
+.brand section ul li:hover img:first-child{
     opacity: 0;
 }
-.elastine:hover img:last-child{
+.brand section ul li:hover img:last-child{
     opacity: 1;
-} */
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------------HISTORY PAGE-------------------------- */
+
+
+
+
