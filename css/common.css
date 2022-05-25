@@ -73,7 +73,10 @@ h3{
     padding: calc(var(--lh)*2) 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap:50px;
+    height: 176px;
+    box-sizing: border-box;
 }
 .tab li{
     font-size: calc(var(--body-fz)*1.47);
@@ -81,6 +84,9 @@ h3{
     text-transform: uppercase;
     padding-bottom:13px;
     border-bottom:1px solid var(--red);
+}
+.tab li:hover{
+    border-bottom-width:2px;
 }
 
 /* --------LAYOUT-------- */
