@@ -79,6 +79,5 @@ $(function(){
         navigation:true,
         anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', 'footer'],
     });
-    $('.story_3').removeClass('fp-overflow');
-    $('footer').addClass('fp-overflow');
+
 });

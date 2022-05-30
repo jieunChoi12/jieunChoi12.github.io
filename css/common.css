@@ -155,7 +155,14 @@ header .main_menu > li > ul >li{
     text-align: center;
     font-size: var(--body-fz);
 }
-header .main_menu > li > ul >li>a:hover{
+header .main_menu > li > ul >li>a{
+    color:#8c8c8c;
+}
+header .main_menu > li > ul >li>a.page{
+    color:#000;
+    font-weight: bold;
+}
+header .main_menu > li > ul >li>a.page:hover{
     color:var(--red);
 }
 header .etc_menu{

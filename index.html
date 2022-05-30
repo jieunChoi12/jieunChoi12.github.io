@@ -12,6 +12,7 @@
     <title>LG 생활건강 - 2차포트폴리오</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
@@ -19,6 +20,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+	<script src="js/modernizr.custom.min.js"></script>
+	<script src="js/ScrollMagic.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -31,7 +35,7 @@
                     <li><a href="brand.html">brand</a>
                         <ul>
                             <li><a href="">Beautiful</a></li>
-                            <li><a href="brand.html">Healthy</a></li>
+                            <li><a href="brand.html" class="page">Healthy</a></li>
                             <li><a href="">Refreshing</a></li>
                         </ul>
                     </li>
@@ -55,8 +59,8 @@
                     <li><a href="#">company</a>
                         <ul>
                             <li><a href="#">CEO 메시지</a></li>
-                            <li><a href="story.html">회사개요</a></li>
-                            <li><a href="history.html">연혁</a></li>
+                            <li><a href="story.html" class="page">회사개요</a></li>
+                            <li><a href="history.html" class="page">연혁</a></li>
                             <li><a href="#">채용정보</a></li>
                             <li><a href="#">전국매장찾기</a></li>
                             <li><a href="#">연구개발</a></li>
@@ -90,7 +94,7 @@
     <div class="main_slide">
         <ul class="slider">
             <li class="slide1">
-                <h2>LG생활건강은 여러분의 생활 속에서 <br> 함께하며 건강하고 아름다운 <br>삶의 실현을 추구합니다.</h2>
+                <h2 >LG생활건강은 여러분의 생활 속에서 <br> 함께하며 건강하고 아름다운 <br>삶의 실현을 추구합니다.</h2>
             </li>
             <li class="slide2">
                 <h2>우리는 건강한 지구를 <br>후손에게 물려주기 위한 ESG활동으로<br> 진정한 계승자로서의 책임을 다할 것입니다.</h2>
@@ -170,56 +174,64 @@
             </div>
         </div>
 
-        <div class="brand_desc content_top_pd">
-            <div class="container">
-                <div id="ctt_1" class="contents">
-                    <div class="content">
-                        <h3>beautiful</h3>
-                        <p>Beautiful 사업은 건강한 아름다움의 꿈을 실현해 나가기 위해 우수한 품질을 갖춘 세계 최고의 브랜드를 육성하는 것을 목표로 하고 있으며, 이를 통해 국내시장 선도를 넘어 해외시장으로 강하게, 멀리 확장해 나가고 있습니다.</p>
-                        <a href="#" class="btn">view more
-                            <span class="material-symbols-outlined">arrow_right_alt</span>
-                        </a>
-                    </div>
-                    <div class="image_wrap">
-                        <img src="Images/best_brand/beautiful/whoo.png" alt="">
-                        <img src="Images/best_brand/beautiful/cnp_2.png" alt="">
-                    </div>
-                </div>
-                <div id="ctt_2" class="contents">
-                    <div class="content">
-                        <h3>healthy</h3>
-                        <p>Healthy 사업은 항상 고객과 함께하는 생활용품 사업으로 일반 가정에서 다양하게 쓰이고 있는 구강용품 / 피부용품 / 모발용품 / 세탁용품 / 주거용품 / 지류용품 등을 통해 보다 편리하고 건강한 생활창조에 이바지하고 있습니다.</p>
-                        <a href="#" class="btn">view more
-                            <span class="material-symbols-outlined">arrow_right_alt</span>
-                        </a>
-                    </div>
-                    <div class="image_wrap">
-                        <img src="Images/best_brand/healthy/AHG09313_E20_l.png" alt="">
-                        <img src="Images/best_brand/healthy/organist_2.png" alt="">
+        <div class="brandD">
+            <div class="brand_desc content_pd panel">
+                <div class="container">
+                    <div id="ctt_1" class="contents">
+                        <div class="content">
+                            <h3>beautiful</h3>
+                            <p>Beautiful 사업은 건강한 아름다움의 꿈을 실현해 나가기 위해 우수한 품질을 갖춘 세계 최고의 브랜드를 육성하는 것을 목표로 하고 있으며, 이를 통해 국내시장 선도를 넘어 해외시장으로 강하게, 멀리 확장해 나가고 있습니다.</p>
+                            <a href="#" class="btn">view more
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </a>
+                        </div>
+                        <ul class="image_wrap">
+                            <li><img src="Images/best_brand/beautiful/whoo.png" alt=""></li>
+                            <li><img src="Images/best_brand/beautiful/cnp_2.png" alt=""></li>
+                            <li><img src="Images/best_brand/beautiful/physiogel_2.png" alt=""></li>
+                        </ul>
                     </div>
                 </div>
-                <div id="ctt_3" class="contents">
-                    <div class="content">
-                        <h3>refreshing</h3>
-                        <p>Refreshing 사업은 특유의 상쾌한 맛으로 전세계 소비자의 사랑을 받아온 코카콜라 제품 등을 국내에서 생산/판매하고 있는 코카-콜라 음료㈜와 썬키스트 훼미리 주스, 써니텐 등을 생산하는 음료 전문 회사인 해태htb㈜ 등에서 다양한 제품을 선보이고 있습니다. 아울러, 빠르게 성장하고 있는 기능성음료와 기능성유제품 시장에 진입하여 소비자에게 더욱 가까이 다가가겠습니다.</p>
-                        <a href="#" class="btn">view more
-                            <span class="material-symbols-outlined">arrow_right_alt</span>
-                        </a>
-                    </div>
-                    <div class="image_wrap">
-                        <img src="Images/best_brand/refreshing/cocacola_2.png" alt="">
-                        <img src="Images/best_brand/refreshing/made.png" alt="">
+            </div>
+            <div class="brand_desc content_pd panel">
+                <div class="container">
+                    <div id="ctt_2" class="contents">
+                        <div class="content">
+                            <h3>healthy</h3>
+                            <p>Healthy 사업은 항상 고객과 함께하는 생활용품 사업으로 일반 가정에서 다양하게 쓰이고 있는 구강용품 / 피부용품 / 모발용품 / 세탁용품 / 주거용품 / 지류용품 등을 통해 보다 편리하고 건강한 생활창조에 이바지하고 있습니다.</p>
+                            <a href="#" class="btn">view more
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </a>
+                        </div>
+                        <ul class="image_wrap">
+                            <li><img src="Images/best_brand/healthy/AHG09313_E20_l.png" alt=""></li>
+                            <li><img src="Images/best_brand/healthy/organist_2.png" alt=""></li>
+                            <li><img src="Images/best_brand/healthy/shapran_care.png" alt=""></li>
+                        </ul>
                     </div>
                 </div>
-                <p class="pager">
-                    <a href="">1</a>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                </p>
+            </div>
+            <div class="brand_desc content_pd">
+                <div class="container">
+                    <div id="ctt_3" class="contents">
+                        <div class="content">
+                            <h3>refreshing</h3>
+                            <p>Refreshing 사업은 특유의 상쾌한 맛으로 전세계 소비자의 사랑을 받아온 코카콜라 제품 등을 국내에서 생산/판매하고 있는 코카-콜라 음료㈜와 썬키스트 훼미리 주스, 써니텐 등을 생산하는 음료 전문 회사인 해태htb㈜ 등에서 다양한 제품을 선보이고 있습니다. 아울러, 빠르게 성장하고 있는 기능성음료와 기능성유제품 시장에 진입하여 소비자에게 더욱 가까이 다가가겠습니다.</p>
+                            <a href="#" class="btn">view more
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </a>
+                        </div>
+                        <ul class="image_wrap">
+                            <li><img src="Images/best_brand/refreshing/cocacola_2.png" alt=""></li>
+                            <li><img src="Images/best_brand/refreshing/made.png" alt=""></li>
+                            <li><img src="Images/best_brand/refreshing/toreta_2.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="esg content_top_pd container" data-aos="fade-down" data-aos-duration="1500">
+        <div class="esg content_top_pd container" data-aos="fade-down" data-aos-duration="1000">
             <h2 class="main_tt">esg management</h2>
             <p>지속가능한 FMCG기업으로서 환경을 지키며 고객에대한 사회적 책임을 다하겠습니다.</p>
             <ul>
@@ -251,7 +263,7 @@
             </ul>
         </div>
 
-        <div class="news content_pd container" data-aos="fade-down" data-aos-duration="1500">
+        <div class="news content_pd container" data-aos="fade-down" data-aos-duration="1000">
             <h2 class="main_tt">news</h2>
             <p>생활건강의 최신 소식을 확인해 보세요.</p>
             <ul>
@@ -286,7 +298,7 @@
         </div>
 
         <div class="ad">
-            <div class="container" data-aos="fade-down" data-aos-duration="1500">
+            <div class="container" data-aos="fade-down" data-aos-duration="1000">
                 <div class="content">
                     <h2 class="main_tt">advertisement</h2>
                     <a href="">LG생활건강 CF 다시 보고 싶다면 ? 
@@ -298,7 +310,7 @@
             </div>
         </div>
 
-        <div class="company content_top_pd container" data-aos="fade-down" data-aos-duration="1500">
+        <div class="company content_top_pd container" data-aos="fade-down" data-aos-duration="1000">
             <h2 class="main_tt">company</h2>
             <ul>
                 <li>
@@ -546,5 +558,6 @@
     </footer>
 
     <script src="js/aos.js"></script>
+    <script src="js/tracking.js"></script>
 </body>
 </html>

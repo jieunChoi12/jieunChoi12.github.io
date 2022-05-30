@@ -12,6 +12,7 @@ $(function(){
             if(currentIndex == page_move.attr('data-slide-index')){
                 page_move.addClass('active');
             }
+            $('.main_slide .slider li').eq(currentIndex).find('h2').addClass('animate__animated animate__fadeInUp');
         },
         onSlideAfter:function($slideElement){
             let idx = $slideElement.index();
@@ -19,6 +20,7 @@ $(function(){
             if(idx == page_move.attr('data-slide-index')){
                 page_move.addClass('active');
             }
+            $slideElement.find('h2').addClass('animate__animated animate__fadeInUp');
         }
     });
     $('.main_slide .control .prev').click(function(e){
@@ -104,7 +106,6 @@ $(function(){
 
     //광고
 
-
     //탑버튼
     let top = $('.top a');
 
@@ -122,9 +123,38 @@ $(function(){
     
 
     AOS.init({
-        offset:350
+        offset:100
     });
-    
+
+    // brand_desc 스크롤효과
+    var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            triggerHook: 'onLeave',
+            duration: "100%"
+        }
+    });
+
+    // get all slides
+    var slides = document.querySelectorAll("div.panel");
+
+    // create scene for every slide
+    for (var i=0; i<slides.length; i++) {
+        new ScrollMagic.Scene({
+                triggerElement: slides[i]
+            })
+            .setPin(slides[i], {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+    }
+
+    //brand_desc slide
+    let bd_slide = $('.brand_desc .image_wrap').bxSlider({
+        slideWidth:500,
+        pager:false
+    });
+    $('.brand_desc .bx-controls .bx-prev').html('<span class="material-symbols-outlined">arrow_circle_left</span>');
+    $('.brand_desc .bx-controls .bx-next').html('<span class="material-symbols-outlined">arrow_circle_right</span>');
+
 
 
 });

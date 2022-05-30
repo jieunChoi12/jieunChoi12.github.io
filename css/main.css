@@ -28,10 +28,9 @@
     line-height: 60px;
     color:var(--white);
     opacity: 0;
-    transition:1s 0.5s;
 }
-.main_slide .slider li[aria-hidden="false"] h2{
-    opacity: 1;
+.animate__animated.animate__fadeInUp {
+    --animate-duration: 2s;
 }
 .slider .slide1 h2{
     text-align: left;
@@ -52,9 +51,8 @@
     left:55%;
 }
 .slider .slide4 h2{
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top:calc(50% - 50px);
+    left:calc(50% - 280px);
     text-shadow:1px 1px 5px #2a2a2a ;
 }
 .main_slide .control a{
@@ -181,8 +179,11 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+    display:flex;
+    align-items: center;
+    z-index:0;
 }
-.brand_desc:after{
+.brand_desc:before{
     content:'';
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
@@ -192,7 +193,7 @@
 }
 .brand_desc > div > .contents{
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
 }
 .brand_desc > div  .content {
@@ -207,13 +208,42 @@
     font-weight: 500;
 }
 .brand_desc > div  .content p{
-    width: 497px;
+    width: 550px;
+    font-size: 20px;
+    line-height: 35px;
 }
 .brand_desc .image_wrap{
     height: 500px;
 }
+.brand_desc .image_wrap li{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+}
 .brand_desc .image_wrap img{
     height: 100%;
+}
+.brand_desc .bx-wrapper{
+    position: relative;
+}
+.brand_desc .bx-controls{
+    width:500px;
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+}
+.brand_desc .bx-controls-direction{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+.brand_desc .bx-controls a span{
+    font-size: 60px;
+    color:var(--white);
+    transition:0.3s;
+}
+.brand_desc .bx-controls a:hover span{
+    color:var(--gray);
 }
 
 /*esg*/
@@ -485,6 +515,14 @@
     color:var(--white);
     z-index: 1;
 }
+.story .banner.active h2{
+    animation-name:fadeInUp;
+    animation-delay:0.3s;
+}
+.story .banner.active h3{
+    animation-name:fadeInUp;
+    animation-delay:0.5s;
+}
 .story main{
     text-align: center;
     font-size: calc(var(--body-fz)*1.17);
@@ -501,6 +539,22 @@
 .story_1 strong{
     color:var(--red);
     font-size: calc(var(--body-fz)*1.76);
+}
+.story_1.active h2{
+    animation-name: fadeInUp;
+    animation-delay:0.4s;
+}
+.story_1.active > p{
+    animation-name: fadeInUp;
+}
+.story_1.active > p:nth-child(2){
+    animation-delay:0.5s;
+}
+.story_1.active > p:nth-child(3){
+    animation-delay:0.6s;
+}
+.story_1.active > p:nth-child(4){
+    animation-delay:0.7s;
 }
 .story_2{
     position: relative;
@@ -559,12 +613,30 @@
     line-height: 40px;
     margin:0 auto;
 }
+.story_2.active * {
+    animation-delay:0.4s;
+}
+.story_2.active h2{
+    animation-name: fadeInLeft;
+}
+.story_2.active ul li:nth-child(1){
+    animation-name: fadeInLeft;
+}
+.story_2.active ul li:nth-child(2){
+    animation-name: fadeInDown;
+}
+.story_2.active ul li:nth-child(3){
+    animation-name: fadeInRight;
+}
+.story_2.active p{
+    animation-name: fadeInUp;
+}
 .story_3{
     position: relative;
     background:rgba(0,0,0,.6);
     height: 100vh;
     overflow: hidden;
-    padding:calc(var(--lh)*2) 0;
+    padding:calc(var(--lh)*3) 0;
     color:var(--white);
 }
 .story_3:before{
@@ -581,7 +653,7 @@
 }
 .story_3 h2{
     text-align: right;
-    padding-bottom:calc(var(--lh)*3);
+    padding-bottom:calc(var(--lh)*4);
 }
 .story_3 .content{
     position: relative;
@@ -627,7 +699,7 @@
     transform: translateY(-40%);
 }
 .story_3 ul li:nth-child(3){
-    bottom:70px;
+    bottom:90px;
     left:50%;
     transform: translateX(-50%);
 }
@@ -641,8 +713,24 @@
     margin:0 auto;
     line-height: 40px;
     position: absolute;
-    left: 50%; top: 45%;
+    left: 50%; top: 40%;
     transform: translate(-50%,-50%);
+}
+.story_3.active h2{
+    animation-name: fadeInRight;
+    animation-delay:0.3s;
+}
+.story_3.active .content{
+    animation-name: fadeInUp;
+    animation-delay:0.5s;
+}
+.story_3.active ul li{
+    animation-name: fadeIn;
+    animation-delay:0.9s;
+}
+.story_3.active p{
+    animation-name: fadeIn;
+    animation-delay:0.9s;
 }
 .fp-watermark{
     display:none;
@@ -663,6 +751,9 @@
 .customer .banner > *{
     color:var(--white);
     z-index: 1;
+}
+.customer .banner h3{
+    animation-delay:0.2s;
 }
 .customer .content_top{
     display:flex;
@@ -828,6 +919,7 @@
     display:flex;
     flex-direction:column;
     justify-content: center;
+    padding:calc(var(--lh)*2) 0;
 }
 .brand section h3{
     text-align: center;
@@ -849,7 +941,7 @@
     position: absolute;
     left:50%; top:50%;
     transform: translate(-50%,-50%);
-    transition:0.6s;
+    transition:0.4s;
 }
 .brand section ul li img:first-child{
     width: 100%;
