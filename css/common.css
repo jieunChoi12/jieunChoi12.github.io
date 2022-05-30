@@ -105,12 +105,17 @@ h3{
 
 /* --------HEADER-------- */
 header{
-    background:linear-gradient(rgba(0,0,0,.3) 105px,rgba(255,255,255,.8) 105px);
+    background:linear-gradient(rgba(0,0,0,.3) 90px,rgba(255,255,255,.8) 91px);
     position: absolute;
     left: 0; right: 0; top: 0;
     z-index:99;
-    height: 105px;
+    height: 90px;
     overflow:hidden;
+}
+header.active{
+    position:fixed;
+    background:linear-gradient(var(--white) 90px,rgba(255,255,255,.8) 90px);
+    box-shadow:1px 1px 3px rgba(0,0,0,.3);
 }
 header > .container{
     display:flex;
@@ -126,11 +131,14 @@ header .main_menu > li{
     position: relative;
 }
 header .main_menu > li > a{
-    padding:40px 0;
+    padding:30px 0;
     color:#fff;
     text-transform: uppercase;
     font-family: var(--en-ff);
-    line-height: 105px;
+    line-height: 90px;
+}
+header.active .main_menu > li > a{
+    color:var(--body-fc);
 }
 header .main_menu > li > ul{
     display:flex;
@@ -138,7 +146,7 @@ header .main_menu > li > ul{
     flex-direction: column;
     gap:15px;
     position: absolute;
-    top:100%;left:50%;
+    top:calc(100% + 1px);left:50%;
     transform: translateX(-50%);
     padding:20px 0;
 }
@@ -160,7 +168,10 @@ header .etc_menu > li{
 }
 header .etc_menu li > a{
     color:#fff;
-    line-height: 105px;
+    line-height: 90px;
+}
+header.active .etc_menu li > a{
+    color:var(--body-fc);
 }
 header .etc_menu .eng{
     font-family: var(--en-ff);
@@ -176,9 +187,10 @@ header .etc_menu .eng > ul{
     height: 110px;
     padding:20px 0;
     background:rgba(255,255,255,.8);
+    box-shadow:0px 1px 3px rgba(0,0,0,.3);
     box-sizing: border-box;
     position: absolute;
-    top:100%; left:50%;
+    top:calc(100% + 1px); left:50%;
     transform: translateX(-50%);
     opacity: 0;
     transition:0.4s;
@@ -195,6 +207,9 @@ header .logo > a{
     height: 44px;
     background:url(../Images/Logo_white.png) no-repeat 0 0/100% 100%;
     text-indent: -999em;
+}
+header.active .logo > a{
+    background-image:url(../Images/logo.png);
 }
 header .target{
     position: absolute;

@@ -62,7 +62,15 @@ $(function(){
     $close.click(function(){
     search_ct.removeClass('active');
     });
-    
+
+    //헤더sticky
+    $(window).scroll(function(){
+        if($(window).scrollTop() > headerHeight){
+            header.addClass('active');
+        }else{
+            header.removeClass('active');
+        }
+    });
     
     
     

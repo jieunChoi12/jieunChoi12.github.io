@@ -121,6 +121,9 @@ $(function(){
     });
     
 
+    AOS.init({
+        offset:350
+    });
     
 
 
