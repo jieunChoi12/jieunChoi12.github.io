@@ -903,11 +903,17 @@
 /* ----------------------BRNAD PAGE-------------------------- */
 .brand .banner{
     background:linear-gradient(to right,rgba(198,185,229,.8),rgba(173,206,255,.8));
+    height: 500px;
 }   
 .brand .banner h2{
     color:var(--white);
     text-transform: uppercase;
     font-family: var(--en-ff);
+    font-size: 100px;
+    text-shadow: 1px 2px 5px rgba(0,0,0,.1);
+}
+.brand main *{
+    z-index:99;
 }
 .brand main .tab{
     padding-bottom:0;
