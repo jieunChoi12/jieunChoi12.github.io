@@ -1,5 +1,16 @@
 $(function(){
 
+    $('.brand .tab li:first-child').click(function(e){
+        e.preventDefault();
+        $('main section').show();
+    });
+    $('.brand .tab li a').click(function(e){
+        e.preventDefault();
+        $('main section').hide();
+        $($(this).attr('href')).show();
+    });
+
+
      //탑버튼
      let top = $('.top a');
 
@@ -14,4 +25,5 @@ $(function(){
          e.preventDefault();
          $('body,html').animate({scrollTop:0},500);
      });
+
 });
