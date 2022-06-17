@@ -66,10 +66,10 @@ $(function(){
     //호버써클
     let li = $('.story_2 ul li');
     li.mouseover(function(){
-        $(this).find('circle').stop().animate({strokeDashoffset:0},400);
+        $(this).find('circle').stop().animate({strokeDashoffset:0},600);
     });
     li.mouseout(function(){
-        $(this).find('circle').stop().animate({strokeDashoffset:1118},400);
+        $(this).find('circle').stop().animate({strokeDashoffset:1118},600);
     });
 
     //풀페이지

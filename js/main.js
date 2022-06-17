@@ -88,8 +88,10 @@ $(function(){
     $('.best_brand').tabs();
     func();
 
-    $('.best_brand .tab li').click(function(){
-        $('.best_brand').tabs();
+    $('.best_brand .tab li').each(function(){
+        $(this).click(function(){
+            $('.best_brand').tabs();
+        });
     });
     $('.best_brand .tab li:first-child').click(function(){
         brand_slide1.reloadSlider();

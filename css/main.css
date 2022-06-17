@@ -153,7 +153,7 @@
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-    color:var(--red);
+    color:var(--gray);
 }
 .best_brand .tab_content .bx-controls a span{
     font-size: 50px;
@@ -192,29 +192,19 @@
     filter:blur(5px);
 }
 .brand_desc.one:before{
-    background-image: url(../Images/mainslide/snowfall-201496.jpg);
+    background-image: url(../Images/mainslide/hd-wallpaper-g1e909b5ed_1920.jpg);
 }
 .brand_desc.two:before{
-    background-image: url(../Images/mainslide/anna-zaro-WnzNQfw1jOU-unsplash.jpg);
+    background-image: url(../Images/mainslide/alyssa-hurley-yekIZ4ltv1o-unsplash.jpg);
 }
 .brand_desc.three:before{
-    background-image: url(../Images/mainslide/jamie-street-qpN5MLx1uwk-unsplash.jpg);
+    background-image: url(../Images/mainslide/giorgio-trovato-Va-lIejKNRE-unsplash.jpg);
 }
-.brand_desc.one > div  .content {
-    color:var(--white);
-}
-.brand_desc.two > div  .content {
+.brand_desc .content > * {
     color:rgb(30, 30, 30);
 }
-.brand_desc.two .btn{
+.brand_desc .btn{
     border-color:rgb(30, 30, 30);
-    color:rgb(30, 30, 30);
-}
-.brand_desc.three .btn{
-    border-color:rgb(30, 30, 30);
-    color:rgb(30, 30, 30);
-}
-.brand_desc.three > div  .content {
     color:rgb(30, 30, 30);
 }
 .brand_desc > div > .contents{
@@ -419,7 +409,7 @@
 /* advertisement */
 .ad{
     height: 600px;
-    background:linear-gradient(rgba(109,110,113,.6),rgba(196,4,82,.3)) fixed;
+    background:linear-gradient(#fff 60%,rgba(227, 194, 194, 0.9)) fixed;
     display:flex;
     align-items: center;
 }
@@ -455,7 +445,7 @@
     border-radius:10px;
     box-sizing: border-box;
     background:var(--white);
-    box-shadow: 1px 2px 5px 2px rgba(109,110,113,.4);
+    box-shadow: 1px 2px 5px 2px rgba(109,110,113,.2);
     text-align: center;
     padding:0 45px;
     display:flex;
@@ -491,7 +481,7 @@
     transition:0.5s;
 }
 .company ul li:hover{
-    box-shadow: 1px 2px 5px 2px rgba(196,4,82,.2);
+    box-shadow: 1px 2px 5px 2px rgba(109,110,113,.4);
     transform: translateY(-10%);
 }
 .company ul li:hover span:last-child{
@@ -668,24 +658,24 @@
 }
 .story_3 h2{
     text-align: right;
-    padding-bottom:calc(var(--lh)*3);
+    padding-bottom:calc(var(--lh)*2);
 }
 .story_3 .content{
     position: relative;
     height: 90%;
 }
 .story_3 ul{
-    width: 100%;
     height:100%;
+    position: relative;
 }
 .story_3 ul:after{
     content:'';
-    width: 1080px;
-    height: 400px;
+    width: 83%;
+    height: 75%;
     border-radius:50%;
     border:2px solid rgba(255,255,255,.5);
     position: absolute;
-    left:50%; top:calc(var(--lh)*2);
+    left:50%; top:58px;
     transform: translateX(-50%);
 }
 .story_3 ul li{
@@ -709,19 +699,19 @@
     transform: translateX(-50%);
 }
 .story_3 ul li:nth-child(2){
-    top:40%;
+    top:50%;
     right:0;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
 }
 .story_3 ul li:nth-child(3){
-    bottom:20px;
+    top:75%;
     left:50%;
     transform: translateX(-50%);
 }
 .story_3 ul li:nth-child(4){
-    top:40%;
+    top:50%;
     left:0;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
 }
 .story_3 p{
     width: 800px;
@@ -1005,8 +995,12 @@
     position: absolute;
     right:0;
 }
+
+main > div{
+    position: relative;
+}
 #history_1{
-    background:#fffff3;
+    background:#f0f0f0;
 }
 #history_2{
     background:#f9fbff;
@@ -1014,22 +1008,52 @@
 .history h2{
     padding-bottom: var(--lh);
 }
-.history .content_1,.history .content_2,.history .content_3{
+/* .history .content_1,.history .content_2,.history .content_3{
     display:flex;
     flex-direction:column;
     gap:200px;
     position: relative;
     height: 100vh;
+} */
+.history .st{
+    padding-bottom:var(--lh);
+}
+.history .st > p:first-child{
+    font-weight: bold;
 }
 .history .left{
+    width: 40%;
     text-align: right;
-    position: absolute;
-    right:calc(50% + 125px);
 } 
 .history .right{
     text-align: left;
+    padding-left:59%;
+}
+.center_line{
+    width: 2px;   
     position: absolute;
-    left:calc(50% + 125px); 
+    top:10em; bottom:10em;
+    left:50%;
+    transform: translateX(-50%);
+    background:#ccc;
+}
+.history .circle{
+    position: absolute;
+    top:10em;
+    left:50%;
+    transform: translateX(-50%);
+    width: 15px; height: 15px;
+    border-radius:50%;
+    background:#ccc;
+}
+.history .circle_bt{
+    position: absolute;
+    bottom:10em;
+    left:50%;
+    transform: translateX(-50%);
+    width: 15px; height: 15px;
+    border-radius:50%;
+    background:#ccc;
 }
 
 
