@@ -2,13 +2,14 @@ $(function(){
 
     //헤더 서브메뉴
     let header = $('header'),
-    menu = header.find('nav>ul>li'),
+    menu = header.find('nav .main_menu>li'),
     link = menu.find('a'),
     target = $('.target'),
     headerHeight = header.outerHeight(),
     newHeight = 0,
     subMenu = menu.find('ul');
-    
+
+
     //서브메뉴높이구하기
     subMenu.each(function(){
     if($(this).outerHeight() > newHeight){
@@ -23,6 +24,7 @@ $(function(){
         header.stop().animate({height:headerHeight});
     }
     )
+
     //서브바
     menu.each(function(){
     $(this).mouseover(function(){
@@ -44,36 +46,60 @@ $(function(){
     //eng
     let eng = $('.eng');
     eng.mouseover(function(){
-    header.css({overflow:'visible'});
-    subMenu.css({display:'none'});
+        header.css({overflow:'visible'});
+        subMenu.css({display:'none'});
     });
     eng.mouseout(function(){
-    header.css({overflow:'hidden'});
-    subMenu.css({display:'flex'});
+        header.css({overflow:'hidden'});
+        subMenu.css({display:'flex'});
     });
     //검색창
     let search = $('.search');
     let search_ct = $('#search');
     let $close = $('#search .close');
     search.click(function(e){
-    e.preventDefault();
-    search_ct.addClass('active');
+        e.preventDefault();
+        search_ct.addClass('active');
+        search_ct.find('input').focus();
     });
     $close.click(function(){
-    search_ct.removeClass('active');
+        search_ct.removeClass('active');
     });
 
     //헤더sticky
     $(window).scroll(function(){
-        if($(window).scrollTop() > headerHeight){
+        if($(window).scrollTop() > 0){
             header.addClass('active');
         }else{
             header.removeClass('active');
         }
     });
     
-    
-    
+    //모바일메뉴
+    let mobile_menu = $('header .mobile_menu');
+    let mobile_open_menu = $('.mobile_open_menu');
+    let mobile_menu_li = $('.mobile_open_menu .main_menu > li');
+    let mobile_eng = $('.mobile_open_menu .mobile_etc_menu .eng a');
+
+    mobile_menu.click(function(e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+        mobile_open_menu.toggleClass('active');
+        if(mobile_open_menu.hasClass('active')){
+            $('body').addClass('active');
+        }
+        else{
+            $('body').removeClass('active');
+        }
+    });
+    mobile_menu_li.click(function(){
+        $(this).siblings().find('ul').slideUp();
+        $(this).find('ul').slideToggle();
+    });
+    mobile_eng.click(function(e){
+        e.preventDefault();
+        $(this).text('kor');
+    });
     
     //푸터
     $('footer .footer_bar').tabs({
