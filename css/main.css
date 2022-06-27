@@ -373,7 +373,7 @@
     padding-top:20px;
 }
 .news ul li .image_wrap{
-    width: 80%;
+    width: 90%;
     height: 60%;
     margin:0 auto;
     display:flex;
@@ -410,6 +410,9 @@
 }
 .news ul li .image_wrap:hover img{
     transform: scale(1.1);
+}
+.news ul .btn{
+    display:none;
 }
 
 /* advertisement */

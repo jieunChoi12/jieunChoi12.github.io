@@ -452,6 +452,7 @@ header .target{
         bottom: 0;
         padding:20px 0;
         background:#fff;
+        box-shadow: 0 1px 7px rgba(0,0,0,.3);
         z-index:701;
         transition:0.5s;
         overflow-y:auto;
@@ -517,6 +518,7 @@ header .target{
     .mobile_open_menu .main_menu > li > ul > li{
         text-align: left;
         padding:7px 0;
+        font-size: 2.8vw;
     }
     .mobile_open_menu .mobile_etc_menu{
         width: 80%;
@@ -579,6 +581,13 @@ header .target{
         --body-fz:13px;
         --lh:20px;
     }
+    header{
+        height:70px;
+    }
+    header .logo a{
+        width: 173px;
+        height: 35px;
+    }
     .footer_bar{
         display:none;
     }
@@ -604,5 +613,30 @@ header .target{
         font-size: 20px;
         padding:10px;
         border-radius:50%;
+    }
+
+    .tab{
+        gap:10vw;
+        height: auto;
+    }
+    .tab li{
+        font-size: 3.5vw;
+    }
+}
+@media (max-width:480px){
+    :root{
+        --body-fz:11px;
+        --lh:17px;
+    }
+    h2{
+        font-size: calc(var(--body-fz)*1.81);
+    }
+    h3{
+        font-size: calc(var(--body-fz)*1.54);
+    }
+    .btn{
+        width: 140px;
+        height: 30px;
+        line-height: 30px;
     }
 }
