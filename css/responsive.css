@@ -16,6 +16,23 @@
         width:300px;
     }
 
+    /* BRAND PAGE */
+    .brand .banner h2{
+        font-size: 10vw;
+    }
+    .brand section ul li{
+        width: 30%;
+        height: 300px;
+    }
+
+    /* STORY PAGE */
+    /* .story .banner>h3{
+        padding:0 20px;
+    }
+    .story_1{
+        padding:0 20px;
+    } */
+
 }
 @media (max-width:768px){
     .main_slide .slider h2{
@@ -149,7 +166,7 @@
         right: 0;
     }
     .brand_desc .image_wrap{
-        height: 40vh;
+        height: 33vh;
     }
 
     .esg ul{
@@ -164,12 +181,14 @@
         padding:0 40px;
     }
     .news ul li{
-        width: 60%;
+        width: 70%;
+        height: 40vh;
         position: relative;
     }
     .news .read_more{
+        display:block;
         position: absolute;
-        top:50%; left:65%;
+        top:50%; left:70%;
         text-transform: uppercase;
     }
     .news .read_more p{
@@ -192,4 +211,11 @@
         display:none;
     }
 
+    /* BRAND PAGE */
+    .brand section ul{
+        justify-content: center;
+    }
+    .brand section ul li{
+        width: 40vw;
+    }
 }

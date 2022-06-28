@@ -29,6 +29,7 @@ h2{
 h3{
     font-size: calc(var(--body-fz)*1.76);
     font-weight: 700;
+    line-height: 1.2;
 }
 .main_tt{
     font-family: var(--en-ff);
@@ -74,6 +75,7 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap:wrap;
     gap:50px;
     height: 176px;
     box-sizing: border-box;
@@ -105,7 +107,7 @@ h3{
 
 /* --------HEADER-------- */
 header{
-    background:linear-gradient(rgba(0,0,0,.3) 90px,rgba(255,255,255,.9) 91px);
+    background:linear-gradient(rgba(0,0,0,.1) 90px,rgba(255,255,255,.9) 91px);
     position: fixed;
     left: 0; right: 0; top: 0;
     z-index:700;
@@ -385,6 +387,7 @@ header .target{
     header{
         display:flex;
         align-items: center;
+        background:transparent;
     }
     header > .container{
         display:block;
@@ -419,6 +422,7 @@ header .target{
         background:#fff;
         position: absolute;
         top:0;
+        box-shadow: 1px 0 5px rgba(0,0,0,.2);
     }
     header .mobile_menu span:nth-child(2),
     header .mobile_menu span:nth-child(3){
@@ -453,12 +457,13 @@ header .target{
         padding:20px 0;
         background:#fff;
         box-shadow: 0 1px 7px rgba(0,0,0,.3);
-        z-index:701;
         transition:0.5s;
         overflow-y:auto;
+        z-index:900;
     }
     .mobile_open_menu.active{
         left: 0;
+
     }
     body.active{
         overflow:hidden;
@@ -491,7 +496,6 @@ header .target{
     }
     .mobile_open_menu .main_menu > li{
         width: 100%;
-        padding:0;
         cursor:pointer;
         text-align: left;
     }
@@ -565,6 +569,12 @@ header .target{
     :root{
         --body-fz:15px;
     }
+    h2{
+        font-size: calc(var(--body-fz)*1.5);
+    }
+    h3{
+        font-size: calc(var(--body-fz)*1.4);
+    }
     .btn{
         text-align: center;
         width: 180px;
@@ -616,23 +626,20 @@ header .target{
     }
 
     .tab{
-        gap:10vw;
+        gap:5vw;
         height: auto;
     }
     .tab li{
         font-size: 3.5vw;
+    }
+    .slide_tt{
+        font-size: calc(var(--body-fz)*2.4);
     }
 }
 @media (max-width:480px){
     :root{
         --body-fz:11px;
         --lh:17px;
-    }
-    h2{
-        font-size: calc(var(--body-fz)*1.81);
-    }
-    h3{
-        font-size: calc(var(--body-fz)*1.54);
     }
     .btn{
         width: 140px;

@@ -411,7 +411,7 @@
 .news ul li .image_wrap:hover img{
     transform: scale(1.1);
 }
-.news ul .btn{
+.news .read_more{
     display:none;
 }
 
@@ -513,15 +513,15 @@
     gap:40px;
     height: 100vh;
 }
-.story .banner:after{
+.story .banner:before{
     content:'';
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     background:rgba(109,110,113,.7);
 }
-.story .banner>*{
+.story .banner>h2,
+.story .banner>h3{
     color:var(--white);
-    z-index: 1;
 }
 .story .banner.active h2{
     animation-name:fadeInUp;
@@ -926,9 +926,6 @@
     font-family: var(--en-ff);
     font-size: 100px;
     text-shadow: 1px 2px 5px rgba(0,0,0,.1);
-}
-.brand main *{
-    z-index:99;
 }
 .brand main .tab{
     padding-bottom:0;
