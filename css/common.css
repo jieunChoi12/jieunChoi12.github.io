@@ -77,18 +77,26 @@ h3{
     align-items: center;
     flex-wrap:wrap;
     gap:50px;
-    height: 176px;
-    box-sizing: border-box;
 }
 .tab li{
     font-size: calc(var(--body-fz)*1.47);
     font-family: var(--en-ff);
     text-transform: uppercase;
     padding-bottom:13px;
-    border-bottom:1px solid var(--red);
+    /* border-bottom:1px solid var(--red); */
+    position: relative;
 }
-.tab li:hover{
-    border-bottom-width:2px;
+.tab li:after{
+    content:'';
+    display:inline-block;
+    height: 1px;
+    background:var(--red);
+    position: absolute;
+    bottom:0px;
+    left: 0; right: 0; 
+}
+.tab li:hover:after{
+    height: 2px;
 }
 
 /* --------LAYOUT-------- */
@@ -324,7 +332,7 @@ header .target{
     font-weight: 700;
 }
 .footer_content{
-    padding:3vh 0;
+    padding:20px 0;
     display:flex;
     gap:4vw;
 }
@@ -422,7 +430,7 @@ header .target{
         background:#fff;
         position: absolute;
         top:0;
-        box-shadow: 1px 0 5px rgba(0,0,0,.2);
+        box-shadow: 1px 0 3px rgba(0,0,0,.2);
     }
     header .mobile_menu span:nth-child(2),
     header .mobile_menu span:nth-child(3){
@@ -492,19 +500,18 @@ header .target{
         display:flex;
         flex-direction:column;
         align-items: center;
-        gap:50px;
     }
     .mobile_open_menu .main_menu > li{
         width: 100%;
         cursor:pointer;
         text-align: left;
+        padding:25px 0;
     }
     .mobile_open_menu .main_menu > li > a{
         color:var(--body-fc);
         line-height: 1;
         font-weight: 700;
         padding:0;
-
     }
     .mobile_open_menu .main_menu > li span{
         position: absolute;
@@ -522,7 +529,7 @@ header .target{
     .mobile_open_menu .main_menu > li > ul > li{
         text-align: left;
         padding:7px 0;
-        font-size: 2.8vw;
+        font-size: var(--body-fz);
     }
     .mobile_open_menu .mobile_etc_menu{
         width: 80%;
@@ -568,6 +575,7 @@ header .target{
 @media (max-width:768px){
     :root{
         --body-fz:15px;
+        --lh:23px;
     }
     h2{
         font-size: calc(var(--body-fz)*1.5);

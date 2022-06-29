@@ -14,7 +14,7 @@ $(function(){
     $('#fullpage').fullpage({
         autoScrolling:true,
         scrollHorizontally: true,
-        scrollOverflow: true,
+        scrolloverflow:true,
         navigation:true,
         anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', 'footer'],
     });

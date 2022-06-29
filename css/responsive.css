@@ -1,3 +1,15 @@
+@media (max-width:1296px){
+    /* STORY PAGE */
+    .story_2 ul li{
+        width: 250px;
+        height: 250px;
+        font-size: calc(var(--body-fz)*1.5);
+        background:rgba(255,255,255,.5);
+    }
+    .story_2 ul li svg{
+        display:none;
+    }
+}
 @media (max-width:960px){
     .brand_desc > div  .content h3{
         font-size: 25px;
@@ -26,12 +38,12 @@
     }
 
     /* STORY PAGE */
-    /* .story .banner>h3{
+    .story .banner>h3{
         padding:0 20px;
     }
     .story_1{
         padding:0 20px;
-    } */
+    }
 
 }
 @media (max-width:768px){
@@ -114,6 +126,40 @@
     }
     .company ul li span:last-child{
         display:none;
+    }
+
+    /* STORY PAGE */
+    .story_2 ul li{
+        width: 170px;
+        height: 170px;
+    }
+    .story_3 ul li{
+        width: 30%;
+        height: 90px;
+        padding:0 10px;
+    }
+    .story_3 ul li:nth-child(1){
+        top:10%;
+        left:0;
+        transform: none;
+    }
+    .story_3 ul li:nth-child(2){
+        top:10%;
+        left:70%;
+        transform: none;
+    }
+    .story_3 ul li:nth-child(3){ 
+        top:75%;
+        left:0;
+        transform: none;
+    }
+    .story_3 ul li:nth-child(4){
+        top:75%;
+        left:70%;
+        transform: none;
+    }
+    .story_3 p{
+        line-height: calc(var(--lh)*2);
     }
 }
 @media (max-width:500px){
@@ -218,4 +264,21 @@
     .brand section ul li{
         width: 40vw;
     }
+
+    /* STORY PAGE */
+    .story_2 ul{
+        display:block;
+    }
+    .story_2 ul li:nth-child(1){
+        margin:0 auto;
+    }
+    .story_2 ul li:nth-child(2),
+    .story_2 ul li:nth-child(3){
+        display:inline-block;
+        margin:5px;
+    }
+    .story_2 p{
+        padding-top:var(--lh)*2;
+    }
+
 }
