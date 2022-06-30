@@ -512,12 +512,14 @@
     background:url(../Images/story/company.jpg) no-repeat center/cover;
     gap:40px;
     height: 100vh;
+    z-index: -2;
 }
 .story .banner:before{
     content:'';
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     background:rgba(109,110,113,.7);
+    z-index: -1;
 }
 .story .banner>h2,
 .story .banner>h3{
@@ -827,7 +829,6 @@
 }
 .content_top .consult{
     width: 100%;
-    height: 224px;
     border:1px solid var(--gray);
     border-radius:20px;
     padding:40px 60px;
@@ -841,7 +842,7 @@
 }
 .content_top .consult p{
     font-weight: bold;
-    font-size: 20px;
+    font-size: calc(var(--body-fz)*1.17);
 }
 .content_top .consult .call{
     font-size: calc(var(--body-fz)*1.3);
@@ -849,6 +850,8 @@
 }
 .content_top .right {
     width: 440px;
+    display:flex;
+    align-items:center;
 }
 .content_top .right ul{
     display:flex;
@@ -857,7 +860,7 @@
 }
 .content_top .right ul li{
     width: 180px;
-    height: 180px;
+    padding:40px 0;
     border-radius:20px;
     box-shadow: 1px 2px 5px 2px rgba(0,0,0,.2);
     display:flex;
@@ -877,7 +880,7 @@
     justify-content: center;
     align-items: center;
     gap:var(--lh);
-    font-size: 20px;
+    font-size: calc(var(--body-fz)*1.17);
     font-weight: bold;
     transition:0.4s;
 }
@@ -887,7 +890,7 @@
 }
 
 .content_bottom{
-    width: 1076px;
+    width: 90%;
     margin:0 auto;
 }
 .content_bottom h2{
@@ -897,27 +900,28 @@
 .faq > p{
     border-bottom:1px solid #ccc;
     padding: 20px 30px;
-    position: relative;
     cursor:pointer;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
     transition:0.4s;
+}
+.faq > p span:first-child{
+    display:none;
 }
 .faq > p.ui-state-active{
     border-bottom:1px solid var(--red);
     background:#f8f8f8;
 }
-.faq > p.ui-state-active >span{
-    transform: rotate(180deg) translateY(50%);
+.faq > p.ui-state-active >span:last-child{
+    transform: rotate(180deg) ;
 }
 .faq > p em{
     color:var(--red);
     font-weight: 700;
 }
-.faq > p span{
+.faq > p span:last-child{
     vertical-align: middle;
-    position: absolute;
-    right:30px;
-    top:50%;
-    transform: translateY(-50%);
     transition:0.4s;
 }
 .faq .desc{
@@ -997,33 +1001,11 @@
 
 
 /* ----------------------HISTORY PAGE-------------------------- */
-.history .control{
-    position: fixed;
-    right:70px; top:50%;
-    transform: translateY(-50%);
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    z-index:100;
-}
-.history .control a{
-    display:inline-block;
-    height: 100px;
-    padding-right:30px;
-    line-height: 100px;
+.history main .section > .container{
+    padding:120px 0;
     position: relative;
 }
-.history .control a:after{
-    content:'';
-    width: 3px;
-    height: 100%;
-    background:var(--white);
-    border:1px solid var(--gray);
-    position: absolute;
-    right:0;
-}
-
-main > div{
+.history main > div{
     position: relative;
 }
 #history_1{
@@ -1032,22 +1014,33 @@ main > div{
 #history_2{
     background:#f9fbff;
 }
-.history h2{
-    padding-bottom: var(--lh);
+.history .container > h2{
+    padding-bottom: calc(var(--lh)*2);
 }
-.history .st{
-    padding-bottom:var(--lh);
-}
-.history .st > p:first-child{
-    font-weight: bold;
+.history .year > div{
+    width: 40%;
 }
 .history .left{
-    width: 40%;
     text-align: right;
 } 
 .history .right{
     text-align: left;
     padding-left:59%;
+}
+.history .st{
+    width: 100%;
+}
+.history .st img{
+    max-width:100%;
+}
+.history .st>*{
+    padding-bottom:10px;
+}
+.history .st > p:first-child{
+    font-weight: bold;
+}
+.history main footer.section > .container{
+    padding:0;
 }
 .center_line{
     width: 2px;   
@@ -1074,6 +1067,15 @@ main > div{
     width: 15px; height: 15px;
     border-radius:50%;
     background:#ccc;
+}
+.history .num{
+    font-size: calc(var(--body-fz)*3);
+    font-weight: bold;
+    color:var(--gray);
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:90;
 }
 
 
