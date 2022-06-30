@@ -219,6 +219,7 @@ header .etc_menu .eng > ul li{
     color:#2a2a2a;
     margin-bottom:12px;
     text-align: center;
+    cursor:pointer;
 }
 header .logo > a{
     display:block;

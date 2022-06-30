@@ -98,7 +98,13 @@ $(function(){
     });
     mobile_eng.click(function(e){
         e.preventDefault();
-        $(this).text('kor');
+        $(this).toggleClass('active');
+        
+        if($(this).hasClass('active')){
+            $(this).text('kor');
+        }else{
+            $(this).text('eng');
+        }
     });
     
     //푸터

@@ -754,18 +754,20 @@
 .story .footer_content{
     padding:20px;
 }
+#fp-nav ul li{
+    margin: 15px 10px;
+}
 #fp-nav ul li a span{
-    width: 10px;
-    height: 1px;
-    background:var(--gray);
+    width: 7px;
+    height: 7px;
+    background: white;
+    box-shadow:1px 1px 3px rgba(0,0,0,.3);
     margin:0;
 }
 #fp-nav ul li a.active span,
 #fp-nav ul li:hover a span,
 #fp-nav ul li:hover a.active span{
-    width: 25px;
-    height: 2px;
-    margin:0;
+    margin: -3px 0px 0 -3px
 }
 #fp-nav ul li a.active span{
     background:var(--red);
@@ -999,13 +1001,12 @@
     opacity: 1;
 }
 
-
 /* ----------------------HISTORY PAGE-------------------------- */
-.history main .section > .container{
+.hist main .section > .container{
     padding:120px 0;
     position: relative;
 }
-.history main > div{
+.hist main > div{
     position: relative;
 }
 #history_1{
@@ -1014,32 +1015,32 @@
 #history_2{
     background:#f9fbff;
 }
-.history .container > h2{
-    padding-bottom: calc(var(--lh)*2);
+.hist .section .container h2{
+    padding-bottom: calc(var(--lh)*4);
 }
-.history .year > div{
+.hist .year > div{
     width: 40%;
 }
-.history .left{
+.hist .left{
     text-align: right;
 } 
-.history .right{
+.hist .right{
     text-align: left;
     padding-left:59%;
 }
-.history .st{
+.hist .st{
     width: 100%;
 }
-.history .st img{
+.hist .st img{
     max-width:100%;
 }
-.history .st>*{
+.hist .st>*{
     padding-bottom:10px;
 }
-.history .st > p:first-child{
+.hist .st > p:first-child{
     font-weight: bold;
 }
-.history main footer.section > .container{
+.hist main footer.section > .container{
     padding:0;
 }
 .center_line{
@@ -1050,7 +1051,7 @@
     transform: translateX(-50%);
     background:#ccc;
 }
-.history .circle{
+.hist .circle{
     position: absolute;
     top:10em;
     left:50%;
@@ -1059,7 +1060,7 @@
     border-radius:50%;
     background:#ccc;
 }
-.history .circle_bt{
+.hist .circle_bt{
     position: absolute;
     bottom:10em;
     left:50%;
@@ -1068,7 +1069,7 @@
     border-radius:50%;
     background:#ccc;
 }
-.history .num{
+.hist .num{
     font-size: calc(var(--body-fz)*3);
     font-weight: bold;
     color:var(--gray);
@@ -1077,7 +1078,10 @@
     transform: translateX(-50%);
     z-index:90;
 }
-
+#fp-nav ul li .fp-tooltip{
+    font-size: calc(var(--body-fz)*1.17);
+    color:var(--gray);
+}
 
 
 

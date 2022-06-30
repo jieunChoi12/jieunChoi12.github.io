@@ -106,8 +106,6 @@ $(function(){
         func();
     });
 
-    //광고
-
     //탑버튼
     let top = $('.top a');
 

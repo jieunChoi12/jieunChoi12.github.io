@@ -18,18 +18,6 @@ $(function(){
         navigation:true,
         anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', 'footer']
     });
-    $('.history #fullpage').fullpage({
-        autoScrolling:true,
-        scrollHorizontally: true,
-        scrolloverflow:true,
-        anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', 'footer'],
-        navigation:true,
-        navigationTooltips: ['banner', '태동기','럭키','생활건강','footer'],
-        showActiveTooltip: true
-    });
 
-    //number animation
-    let num = $('.section .num');
-    
 
 });

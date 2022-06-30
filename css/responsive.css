@@ -16,7 +16,7 @@
     }
     .brand_desc > div  .content p{
         font-size: var(--body-fz);
-        width: 100%;
+        width: 90%;
     }
     .brand_desc .image_wrap{
         height: 45vh;
@@ -25,7 +25,7 @@
         width: 50%;
     }
     .brand_desc .bx-controls{
-        width:300px;
+        width:280px;
     }
 
     /* BRAND PAGE */
