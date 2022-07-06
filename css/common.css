@@ -366,6 +366,7 @@ header .target{
     position: fixed;
     right: 5%;
     bottom:6%;
+    opacity: 0;
 }
 .top a:hover{
     border-color:var(--red);

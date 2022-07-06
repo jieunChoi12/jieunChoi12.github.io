@@ -166,9 +166,9 @@ $(function(){
 
     $(window).scroll(function(){
         if($(this).scrollTop() > 900){
-            top.fadeIn();
+            top.css({opacity:1});
         }else{
-            top.fadeOut();
+            top.css({opacity:0});
         }
     });
     top.click(function(e){
@@ -210,6 +210,15 @@ $(function(){
     $('.brand_desc .bx-controls .bx-prev').html('<span class="material-symbols-outlined">arrow_circle_left</span>');
     $('.brand_desc .bx-controls .bx-next').html('<span class="material-symbols-outlined">arrow_circle_right</span>');
 
+    //ad
+    let video_click = $('.ad #video');
+    let video = $('.ad .video');
 
+    video_click.click(function(){
+        video.css({display:'flex'});
+    });
+    video.click(function(){
+        $(this).css({display:'none'});
+    });
 
 });

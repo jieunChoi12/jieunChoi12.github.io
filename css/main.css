@@ -438,9 +438,35 @@
 .ad .content:hover span{
     padding-left:30px;
 }
-.ad iframe{
+.ad .play_video{
     width: 522px;
     height: 327px;
+    position: relative;
+}
+.ad .play_video img{
+    width: 100%;
+}
+.ad .play_video span{
+    color:var(--white);
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor:pointer;
+}
+.ad .video{
+    position: fixed;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content: center;
+    align-items:center;
+    z-index:900;
+}
+.ad .video iframe{
+    width: 700px;
+    height: 60vh;
 }
 
 /* company */
