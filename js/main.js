@@ -1,5 +1,60 @@
 $(function(){
+    //쿠키팝업
+    let popup = document.querySelector('.popup'),
+        popupCheck = document.querySelector('#popup'),
+        popupClose = document.querySelector('.popup .close');
 
+   //쿠키생성함수
+   function setCookie(name,value,day){
+        let date = new Date();
+        date.setDate(date.getDate() + day);
+
+        let cookieContent = '';
+        cookieContent += `${name}=${value};`;
+        cookieContent += `Expires=${date.toUTCString()}`;
+
+        document.cookie = cookieContent;
+   }
+
+   //쿠키확인함수
+   function getCookie(name){
+        let visited = false;
+        let cookies = document.cookie.split(';');
+
+        for(let cookie of cookies){
+            if(cookie.indexOf(name) > -1){
+                visited = true;
+            }
+        }
+        if(visited){
+            popup.style.display = 'none';
+        }else{
+            popup.style.display = 'block';
+        }
+   }
+   getCookie('CJE');
+
+   //쿠키삭제함수
+   function delCookie(name,value){
+        let date = new Date();
+        date.setDate(date.getDate() - 1);
+
+        let cookieContent = '';
+        cookieContent += `${name}=${value};`;
+        cookieContent += `Expires=${date.toUTCString()}`;
+
+        document.cookie = cookieContent;
+   }
+
+   popupClose.addEventListener('click',function(e){
+    e.preventDefault();
+        popup.style.display = 'none';
+        if(popupCheck.checked){
+            setCookie('CJE','Mainpage',1);
+        }else{
+            delCookie('CJE','Mainpage');
+        }
+   });
 
     //메인슬라이드
     let page_move = $('.bx-controls .bx-pager a');

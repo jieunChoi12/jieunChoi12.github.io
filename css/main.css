@@ -498,6 +498,64 @@
     opacity: 1;
 }
 
+.popup{
+    padding:40px;
+    width: 500px;
+    background:rgba(255,255,255,.9);
+    border-radius:10px;
+    box-shadow:2px 2px 5px rgba(0,0,0,.2);
+    font-size: 15px;
+    position: fixed;
+    top:16%;
+    left: 10%;
+    z-index:999;
+    display:flex;
+    flex-direction:column;
+    gap:var(--body-fz);
+}
+.popup hr{
+    color:#ccc;
+    width: 100%;
+}
+.popup .hd{
+    font-size: var(--body-fz);
+    font-weight: bold;
+}
+.popup .desc{
+    font-size: calc(var(--body-fz)*0.7);
+}
+.popup .desc p em{
+    color:var(--red);
+}
+.popup .content{
+    font-size: var(--body-fz);
+}
+.popup .content em{
+    font-weight: bold;
+}
+.popup .content a{
+    color:var(--red);
+    font-weight: bold;
+}
+.popup .content .page a{
+    padding:0 10px;
+    text-decoration: underline;
+}
+.popup .content p:nth-child(5) em{
+    color:var(--body-fc);
+}
+.popup .content p:last-child a{
+    font-weight: normal;
+}
+.popup label{
+    font-size: var(--body-fz);
+}
+.popup .close{
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+
 
 /* ----------------------STORY PAGE-------------------------- */
 .banner{
@@ -1041,7 +1099,7 @@
     font-weight: bold;
 }
 .hist main footer.section > .container{
-    padding:0;
+    padding:20px 0;
 }
 .center_line{
     width: 2px;   
@@ -1077,6 +1135,9 @@
     left:50%;
     transform: translateX(-50%);
     z-index:90;
+}
+.hist footer{
+    background:#ebebeb;
 }
 #fp-nav ul li .fp-tooltip{
     font-size: calc(var(--body-fz)*1.17);

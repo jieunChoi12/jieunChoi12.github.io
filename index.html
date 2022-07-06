@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	<script src="js/ScrollMagic.js"></script>
@@ -29,6 +30,37 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+    <div class="popup">
+        <p class="hd">본 사이트는 구직용 개인 포트폴리오 사이트입니다.</p>
+        <div class="desc">
+            <p>LG 생활건강과 무관함을 안내드립니다.</p>
+            <p>원활한 화면구성을 위해 <em>최신 Browser를 사용해주세요.</em></p>
+            <p>이 사이트에 사용된 내용 저작권은 LG 생활건강에 있으므로 무단으로 사용할 수 없습니다.</p>
+        </div>
+        <hr>
+        <div class="content">
+            <p><em>학습기간 : </em> 2022.02.25 ~ 2022.07.13</p>
+            <p><em>제작기간 : </em> 2022.04.15 ~ 2022.07.01</p>
+            <p><em>주요특징 : </em> html / css (flex,css변수) / script(jQuery,Library) / 웹표준 준수 / 웹접근성 준수 / 반응형</p>
+            <p class="page"><em>구현 완료 페이지 : </em>
+                <a href="index.html">메인페이지</a> /
+                <a href="brand.html">HEALTHY</a> /
+                <a href="story.html">회사개요</a> /
+                <a href="history.html">연혁</a> /
+                <a href="customer.html">고객센터</a> / 
+                <a href="#">검색창</a>
+
+            </p>
+            <p><a href="#"><em>LG 생활건강 기획서보러가기</em></a></p>
+            <p><em>제작자 : </em> 최지은 <a href="mailto:cje912@gmail.com">cje912@gmail.com</a></p>
+        </div>
+        <hr>
+        <p>
+            <label for="popup">오늘 하루 표시하지 않기</label>
+            <input type="checkbox" id="popup">
+        </p>
+        <a href="" class="close"><span class="material-symbols-outlined">close</span></a>
+    </div>
     <header>
         <div class="container">
             <a href="" class="mobile_menu">
@@ -389,25 +421,25 @@
                     <span class="material-symbols-outlined">apartment</span>
                     <h3>회사개요</h3>
                     <p>고객의 아름다움과 꿈을 실현하는 최고의 생활문화 기업을 추구 합니다.</p>
-                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                    <a href="story.html"><span class="material-symbols-outlined right">arrow_right_alt</span></a>
                 </li>
                 <li>
                     <span class="material-symbols-outlined icon">handshake</span>
                     <h3>채용정보</h3>
                     <p>일을 즐기고, 생활을 즐기고, 꿈을 즐기는 일할 맛 나는 직장 LG생활건강에서 당신의 꿈을 펼쳐보세요</p>
-                    <span class="material-symbols-outlined right">arrow_right_alt</span>
+                    <a href="#"><span class="material-symbols-outlined right">arrow_right_alt</span></a>
                 </li>
                 <li>
                     <span class="material-symbols-outlined icon">emoji_objects</span>
                     <h3>연구개발</h3>
                     <p>고객의 꿈과 아름다움의 실현을 위한 제품개발에 적극적으로 힘쓰고 있습니다.</p>
-                    <span class="material-symbols-outlined right">arrow_right_alt</span>
+                    <a href="#"><span class="material-symbols-outlined right">arrow_right_alt</span></a>
                 </li>
                 <li>
                     <span class="material-symbols-outlined icon">trending_up</span>
                     <h3>투자정보</h3>
                     <p>LG생활건강은 깨끗하고 투명한 경영으로 여러분과 만날 것을 약속 합니다.</p>
-                    <span class="material-symbols-outlined right">arrow_right_alt</span>
+                    <a href="#"><span class="material-symbols-outlined right">arrow_right_alt</span></a>
                 </li>
             </ul>
         </div>

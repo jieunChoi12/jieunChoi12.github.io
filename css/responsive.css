@@ -55,6 +55,11 @@
     }
 }
 @media (max-width:768px){
+    .popup{
+        width: 75%;
+        left:50%;
+        transform: translateX(-50%);
+    }
     .main_slide .slider h2{
         font-size: calc(var(--body-fz)*1.8);
     }
@@ -286,7 +291,7 @@
         margin:5px;
     }
     .story_2 p{
-        padding-top:var(--lh)*2;
+        padding-top:calc(var(--lh)*2);
     }
 
     /* CUSTOMER PAGE */
@@ -306,5 +311,4 @@
     .content_top .right ul li{
         width: 40%;
     }
-
 }
