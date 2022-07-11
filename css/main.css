@@ -955,6 +955,7 @@
     display:flex;
     flex-wrap:wrap;
     gap:3vw;
+    justify-content:center;
 }
 .content_top .right ul li{
     width: 180px;
@@ -1164,7 +1165,7 @@
     background:#ccc;
 }
 .hist .num{
-    font-size: calc(var(--body-fz)*3);
+    font-size: calc(var(--body-fz)*2);
     font-weight: bold;
     color:var(--gray);
     position: fixed;

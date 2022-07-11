@@ -653,11 +653,10 @@ header .target{
 }
 @media (max-width:480px){
     :root{
-        --body-fz:11px;
-        --lh:17px;
+        --lh:18px;
     }
     .btn{
-        width: 140px;
+        width: 150px;
         height: 30px;
         line-height: 30px;
     }

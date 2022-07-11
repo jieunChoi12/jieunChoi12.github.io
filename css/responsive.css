@@ -307,11 +307,11 @@
         width: 70vw;
         justify-content: center;
     }
-    .content_top .right ul{
-        justify-content: center;
-    }
     .content_top .right ul li{
         width: 40%;
+    }
+    .content_top .notice h2:after{
+        height: 200%;
     }
 }
 @media (max-width:376px){
