@@ -440,7 +440,6 @@
 }
 .ad .play_video{
     width: 522px;
-    height: 327px;
     position: relative;
 }
 .ad .play_video img{
@@ -530,7 +529,7 @@
 .popup{
     padding:40px;
     width: 500px;
-    background:rgba(255,255,255,.9);
+    background:rgb(255,255,255);
     border-radius:10px;
     box-shadow:2px 2px 5px rgba(0,0,0,.2);
     font-size: 15px;
@@ -549,6 +548,7 @@
 .popup .hd{
     font-size: var(--body-fz);
     font-weight: bold;
+    padding-bottom:10px;
 }
 .popup .desc{
     font-size: calc(var(--body-fz)*0.8);
@@ -556,8 +556,11 @@
 .popup .desc p em{
     color:var(--red);
 }
+.popup .desc p span{
+    vertical-align:middle;
+}
 .popup .content{
-    font-size: var(--body-fz);
+    font-size: calc(var(--body-fz)*0.9);
 }
 .popup .content em{
     font-weight: bold;
@@ -573,6 +576,9 @@
 .popup .content p:nth-child(5) em{
     color:var(--body-fc);
 }
+.popup .content p:nth-child(5) em span{
+    vertical-align:middle;
+}
 .popup .content p:last-child a{
     font-weight: normal;
 }
@@ -583,6 +589,9 @@
     position: absolute;
     top:20px;
     right:20px;
+}
+.popup #popup{
+    vertical-align:middle;
 }
 
 
@@ -1089,8 +1098,8 @@
 }
 
 /* ----------------------HISTORY PAGE-------------------------- */
-.hist main .section > .container{
-    padding:120px 0;
+.hist main .y_con > .container{
+    padding:120px 20px;
     position: relative;
 }
 .hist main > div{
@@ -1102,9 +1111,10 @@
 #history_2{
     background:#f9fbff;
 }
-.hist .section .container h2{
+.hist .y_con .container h2{
     padding-bottom: calc(var(--lh)*4);
 }
+
 .hist .year > div{
     width: 40%;
 }
@@ -1126,9 +1136,6 @@
 }
 .hist .st > p:first-child{
     font-weight: bold;
-}
-.hist main footer.section > .container{
-    padding:20px 0;
 }
 .center_line{
     width: 2px;   

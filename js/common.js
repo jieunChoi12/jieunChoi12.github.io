@@ -18,7 +18,9 @@ $(function(){
     });
     menu.hover(
     function(){
-        header.stop().animate({height:newHeight});
+        if($(window).width()>960){
+            header.stop().animate({height:newHeight});
+        }
     },
     function(){
         header.stop().animate({height:headerHeight});

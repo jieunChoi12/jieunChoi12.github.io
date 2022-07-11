@@ -214,7 +214,8 @@ $(function(){
     let video_click = $('.ad #video');
     let video = $('.ad .video');
 
-    video_click.click(function(){
+    video_click.click(function(e){
+        e.preventDefault();
         video.css({display:'flex'});
     });
     video.click(function(){
